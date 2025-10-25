@@ -247,7 +247,7 @@
     <h1>HOME DASHBOARD</h1>
     <div class="header-right">
       <div class="logo">kivo</div>
-      <button class="logout-btn" onclick="logout()">Logout</button>
+      <button class="logout-btn" onclick="window.location.href='Login.html'">Logout</button>
     </div>
   </header>
 
@@ -344,11 +344,6 @@
   </main>
 
   <script>
-    function logout() {
-      if (confirm("Are you sure you want to log out?")) {
-        window.location.href = "Login.html";
-      }
-    }
 
     // draw mini line chart
     (function(){
