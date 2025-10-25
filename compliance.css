@@ -37,6 +37,22 @@ body {
   transform: translateX(-3px);
   text-decoration: underline;
 }
+.logout-btn {
+  background: #5fa9d9;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: transparent;
+  border: 2px solid var(--white);
+  color: #5fa9d9;
+}
 /* Header */
 header {
   display: flex;
@@ -57,6 +73,7 @@ header .logo {
   font-size: 26px;
   font-weight: 700;
   color: var(--blue-text);
+  margin-left: 750px;
 }
 
 /* Main Section */
