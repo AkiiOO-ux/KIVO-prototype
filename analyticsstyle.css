@@ -1,0 +1,339 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f7e58a;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: white;
+    padding: 20px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+    color: #5CA2CD;
+    font-size: 24px;
+    font-weight: 600;
+}
+/* Right side of navbar */
+.right-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Logout Button */
+.logout-btn {
+    background-color: #5CA2CD;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.logout-btn:hover {
+    background-color: #4a8eb5;
+    transform: translateY(-2px);
+}
+/* Back Button */
+.back-btn {
+    background: none;
+    border: none;
+    color: #5CA2CD;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 25px 0 0 45px;
+    margin-left: 70px;
+}
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+/* Layout */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+}
+.box-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.box {
+    background-color: #eaf3f9;
+    width: 580px;
+    min-height: 320px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 25px;
+}
+
+/* TOP PRODUCTS */
+#top-products .title {
+    color: #4e9ec8;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.number-box {
+    background-color: #5CA2CD;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 8px;
+    margin: 0 4px;
+    font-weight: 600;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+.toggle-btn {
+    background-color: #b7d7e9;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+.toggle-btn.active {
+    background-color: #5CA2CD;
+}
+
+/* Chart styling */
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.bar-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bar-row span {
+    font-size: 13px;
+    color: #333;
+    width: 260px;
+}
+
+.bar {
+    background-color: #d8e8f2;
+    border-radius: 8px;
+    height: 20px;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.fill {
+    background-color: #5CA2CD;
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.6s ease;
+}
+
+
+.x-axis {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-left:265px;
+    font-size: 12px;
+    color: #777;
+    padding: 0 15px; 
+}
+
+/* TREND FORECASTING SECTION */
+.trend-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 580px;
+}
+
+/* Section Title */
+.trend-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #5CA2CD;
+    margin-left: 10px;
+}
+
+.box2 {
+    background-color: #eaf3f9;
+    width: 580px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 30px 35px;
+}
+
+/* Title at the top (separate from inner content) */
+.box2 h2 {
+    font-size: 22px;
+    color: #5CA2CD;
+    font-weight: 700;
+    margin-bottom: -20px;
+}
+
+/* Inner layout (PROJECTED GROWTH + Buttons) */
+.box-bel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Text Section */
+.text-content {
+    flex: 1;
+}
+
+.projected-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #5CA2CD;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.growth-percentage {
+    font-size: 48px;
+    font-weight: 700;
+    color: #5CA2CD;
+    margin-bottom: 15px;
+}
+
+.growth-description {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+    max-width: 350px;
+}
+
+/* Buttons */
+.forecast-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.forecast-btn {
+    background-color: #5CA2CD; 
+    border: 2px solid #5CA2CD; 
+    color: white; /* White text */
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 130px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.forecast-btn:hover {
+    background-color: white; 
+    color: #5CA2CD; 
+}
+
+/* BRANCH COMPARISON */
+#branch-comparison {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#branch-comparison h2 {
+    color: #5CA2CD;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#branch-comparison canvas {
+    width: 100% !important;
+    height: 250px !important;  /* Fixes stretching */
+}
+
+/* TREND FORECASTING */
+#trend-forecasting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.trend-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#trend-forecasting h2 {
+    color: #5CA2CD;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.forecast-method-btn {
+    background-color: #5CA2CD;
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.forecast-method-btn:hover {
+    background-color: white;
+    color: #5CA2CD;
+    border: 2px solid #5CA2CD;
+}
+
+#trend-forecasting canvas {
+    width: 100% !important;
+    height: 250px !important; /* Fixed height to prevent stretching */
+}
+

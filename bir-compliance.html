@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compliance Status</title>
+  <link rel="stylesheet" href="bir-compliance.css">
+</head>
+<body>
+  <div class="container">
+    <button class="back-btn" onclick="window.history.back()">&lt; Back</button>
+    <header>
+      <h1>COMPLIANCE AND SAFETY</h1>
+    </header>
+    <section class="bir-compliance">
+
+      <h2>BIR COMPLIANCE</h2>
+
+      <div class="status-box">
+        <div class="status">
+          <span class="status-check">&#10003;</span>
+          <span class="status-text">Compliance Status: All Systems are Okay</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="invoice-toggle">
+          <label for="e-receipts">E-INVOICING AND RECEIPTS</label>
+          <input type="checkbox" id="e-receipts" checked>
+        </div>
+
+        <div class="form-group">
+          <label for="report-type">REPORT TYPE</label>
+          <select id="report-type">
+            <option>Monthly Sales Summary (2550M)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date-range">DATE RANGE</label>
+          <select id="date-range">
+            <option>Date Ranges</option>
+          </select>
+        </div>
+
+        <button class="generate-button">Generate and Submit to BIR</button>
+      </div>
+
+      <div class="bir-reports">
+        <h3>BIR REPORTS AND SUBMISSIONS</h3>
+        <div class="report">
+          <div class="date-submitted">
+            <label>Date Submitted</label>
+            <span>2025-10-12 03:00:00</span>
+          </div>
+          <div class="status">
+            <label>Status</label>
+            <span>Successful</span>
+          </div>
+          <div class="confirmation">
+            <label>Confirmation</label>
+            <span>2025-10-12 03:00:00</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

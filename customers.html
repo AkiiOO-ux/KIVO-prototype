@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Customer Connection</title>
+  <link rel="stylesheet" href="customers.css" />
+</head>
+<body>
+  <header>
+    <h1>CUSTOMER CONNECTION</h1>
+    <div class="logo">kivo</div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </header>
+<button class="back-btn" onclick="window.history.back()">&lt; Back</button>
+  <main class="container">
+    
+    <!-- Loyalty Programs -->
+    <section class="loyalty-section">
+      <div class="loyalty-card">
+        <div class="loyalty-header">
+          <h2>LOYALTY PROGRAMS</h2>
+          <button class="add-btn">Add Customer</button>
+        </div>
+
+        <div class="loyalty-grid">
+          <!-- Row 1 -->
+          <div class="customer-item highlight">
+            <div class="avatar star"></div>
+            <div class="info">
+              <h3>Sarah Martinez</h3>
+              <p>Points: 420</p>
+            </div>
+            <span class="claimed">Claimed</span>
+          </div>
+
+          <div class="customer-item highlight">
+            <div class="avatar"></div>
+            <div class="info">
+              <h3>Tina Gomez</h3>
+              <p>Points: 410</p>
+            </div>
+            <span class="claimed">Claimed</span>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="customer-item">
+            <div class="avatar"></div>
+            <div class="info">
+              <h3>Mark Dela Peña</h3>
+              <p>Points: 305</p>
+            </div>
+            <span class="claimed">Claimed</span>
+          </div>
+
+          <div class="customer-item">
+            <div class="avatar"></div>
+            <div class="info">
+              <h3>Carlo Lim</h3>
+              <p>Points: 247</p>
+            </div>
+            <span class="claimed">Claimed</span>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="customer-item">
+            <div class="avatar"></div>
+            <div class="info">
+              <h3>Jenny Uy</h3>
+              <p>Points: 147</p>
+            </div>
+            <span class="claimed">Claimed</span>
+          </div>
+
+          <div class="customer-item">
+            <div class="avatar"></div>
+            <div class="info">
+              <h3>Leo Ramirez</h3>
+              <p>Points: 165</p>
+            </div>
+            <span class="claimed">Claimed</span>
+          </div>
+
+          <!-- Row 4 -->
+          <div class="customer-item">
+            <div class="avatar"></div>
+            <div class="info">
+              <h3>Mika Tan</h3>
+              <p>Points: 95</p>
+            </div>
+            <span class="claimed">Claimed</span>
+          </div>
+
+          <div class="customer-item">
+            <div class="avatar"></div>
+            <div class="info">
+              <h3>Rico Bautista</h3>
+              <p>Points: 125</p>
+            </div>
+            <span class="claimed">Claimed</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Purchase History -->
+      <div class="purchase-card">
+        <div class="purchase-header">
+          <h2>PURCHASE HISTORY</h2>
+          <div class="search">
+            <span>Sarah M.</span>
+            <div class="icon">🔍</div>
+          </div>
+        </div>
+
+        <div class="purchase-table">
+          <div class="header-row">
+            <span>Date</span><span>Total (₱)</span><span>Mode</span><span>Points</span>
+          </div>
+          <div class="row">Oct 4 2025 - 4:32 PM<span>₱310</span><span>Cash</span><span>+31</span></div>
+          <div class="row">Oct 4 2025 - 11:14 AM<span>₱175</span><span>Cash</span><span>+17</span></div>
+          <div class="row">Oct 1 2025 - 2:08 PM<span>₱320</span><span>E-Wallet</span><span>+32</span></div>
+          <div class="row">Sep 29 2025 - 9:50 AM<span>₱150</span><span>Cash</span><span>+15</span></div>
+          <div class="row">Sep 25 2025 - 5:40 PM<span>₱290</span><span>Card</span><span>+29</span></div>
+          <div class="row">Sep 18 2025 - 10:10 AM<span>₱280</span><span>E-Wallet</span><span>+28</span></div>
+          <div class="row">Sep 14 2025 - 4:00 PM<span>₱160</span><span>Cash</span><span>+16</span></div>
+        </div>
+      </div>
+
+      <!-- Personalized Promos -->
+      <div class="promos-card">
+        <div class="promo-header">
+          <h2>PERSONALIZED PROMOS</h2>
+          <div class="search">
+            <span>Sarah M.</span>
+            <div class="icon">🔍</div>
+          </div>
+        </div>
+
+        <div class="promo-list">
+          <div class="promo-item">
+            <span class="promo-name">Birthday Treat Ahead!</span>
+            <span class="promo-discount">₱100 off</span>
+            <span class="promo-dates">Oct 9–16, 2025</span>
+            <div class="toggle active"></div>
+          </div>
+
+          <div class="promo-item">
+            <span class="promo-name">Gold Tier Thank You Bonus</span>
+            <span class="promo-discount">2× points</span>
+            <span class="promo-dates">Oct 11–13, 2025</span>
+            <div class="toggle active"></div>
+          </div>
+
+          <div class="promo-item">
+            <span class="promo-name">Refer & Earn</span>
+            <span class="promo-discount">₱50 off</span>
+            <span class="promo-dates">Ongoing</span>
+            <div class="toggle active"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
+    });
+  });
+});
+function logout() {
+  if (confirm("Are you sure you want to logout?")) {
+    window.location.href = "login.html"; // Change this to your actual login page
+  }
+}
+</script>
+
+</body>
+</html>

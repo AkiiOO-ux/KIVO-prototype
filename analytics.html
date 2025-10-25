@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analytics Dashboard</title>
+    <link rel="stylesheet" href="analyticsstyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="analyticsJS.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <h1>ANALYTICS DASHBOARD</h1>
+        <div class="right-nav">
+            <h1>kivo</h1>
+            <button class="logout-btn" onclick="window.location.href='Login.html'">Logout</button>
+        </div>
+    </div>
+
+    <button class="back-btn" onclick="window.history.back()">&lt; Back</button>
+
+    <div class="content">
+        <div class="box-row">
+            <!-- TOP PRODUCTS BOX -->
+            <div class="box" id="top-products">
+                <h2 class="title">TOP PRODUCTS</h2>
+                <div class="subheader">
+                    <span>Top <span class="number-box">5</span> Products</span>
+                    <div class="btn-group">
+                        <button class="toggle-btn active" onclick="changeData('sales')">Based on Sales</button>
+                        <button class="toggle-btn" onclick="changeData('units')">Based on Units Sold</button>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="bar-row">
+                        <span>Coca-Cola – 1L Bottle</span>
+                        <div class="bar"><div class="fill" style="width:90%"></div></div>
+                    </div>
+                    <div class="bar-row">
+                        <span>Lucky Me! Pancit Canton – Kalamansi</span>
+                        <div class="bar"><div class="fill" style="width:80%"></div></div>
+                    </div>
+                    <div class="bar-row">
+                        <span>Gardenia – Classic White Loaf</span>
+                        <div class="bar"><div class="fill" style="width:70%"></div></div>
+                    </div>
+                    <div class="bar-row">
+                        <span>Piattos – Cheese Flavor</span>
+                        <div class="bar"><div class="fill" style="width:60%"></div></div>
+                    </div>
+                    <div class="bar-row">
+                        <span>Milo – Sachet (22g)</span>
+                        <div class="bar"><div class="fill" style="width:50%"></div></div>
+                    </div>
+                </div>
+
+                <div class="x-axis">
+                    <span>0</span><span>5000</span><span>10000</span><span>15000</span><span>20000</span><span>25000</span>
+                </div>
+            </div>
+
+            <!-- BRANCH COMPARISON BOX -->
+            <div class="box" id="branch-comparison">
+                <h2>BRANCH COMPARISON</h2>
+                <canvas id="branchChart"></canvas>
+            </div>
+        </div>
+
+        <div class="box-row">
+            <div class="box" id="trend-forecasting">
+                <div class="trend-header">
+                    <h2>TREND FORECASTING</h2>
+                    <button class="forecast-method-btn">Choose Forecasting Method</button>
+                </div>
+                <canvas id="trendChart"></canvas>
+            </div>
+            <div class="box2">
+                <h2>TREND FORECASTING</h2>
+                <div class="box-bel"> 
+                    <div class="projected-growth">
+                        <h3 class="projected-title">
+                            PROJECTED NET GROWTH
+                            <span class="growth-percentage">15%</span>
+                        </h3>
+                        <p class="growth-description">
+                            The sales increased while expenses stayed manageable, and with this steady trend, the business is projected to maintain a 15% growth.
+                        </p>
+                    </div>
+                    <div class="forecast-buttons">
+                        <button class="forecast-btn">Net Growth</button>
+                        <button class="forecast-btn">Expenses</button>
+                        <button class="forecast-btn">Sales</button>
+                        <button class="forecast-btn">Cash Flows</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
+    

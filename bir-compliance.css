@@ -1,0 +1,217 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #869AA3, #B9E3FF);
+  color: #333;
+  padding: 30px 10px;
+}
+.back-btn {
+  background: none;
+  border: none;
+  color: #5CA2CD;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  display: inline-block;
+  text-align: left;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+  color: #3f83b4;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-top: 70px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 32px;
+  color: #1d6f97;
+  font-weight: 600;
+}
+
+/* BIR Compliance Section */
+.bir-compliance {
+  margin-top: 30px;
+}
+
+.bir-compliance h2 {
+  font-size: 24px;
+  color: #3f83b4;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.status-box {
+  background-color: #fff2b8;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.status-check {
+  color: #3f83b4;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.status-text {
+  color: #3f83b4;
+  font-weight: 500;
+}
+
+/* Controls Section */
+.controls {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.invoice-toggle {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  color: #3f83b4;
+}
+
+.invoice-toggle label {
+  font-weight: 500;
+}
+
+.invoice-toggle input[type="checkbox"] {
+  appearance: none;
+  width: 50px;
+  height: 24px;
+  background: #e6e6e6;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.invoice-toggle input[type="checkbox"]:checked {
+  background: #fff2b8;
+}
+
+.invoice-toggle input[type="checkbox"]::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.invoice-toggle input[type="checkbox"]:checked::after {
+  left: 28px;
+}
+
+/* Form groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #3f83b4;
+  font-weight: 500;
+}
+
+.form-group select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  background-color: #fff2b8;
+  color: #3f83b4;
+  cursor: pointer;
+}
+
+/* Generate Button */
+.generate-button {
+  background-color: #fff2b8;
+  color: #3f83b4;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* BIR Reports Section */
+.bir-reports {
+  margin-top: 40px;
+  background-color: #fff2b8;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.bir-reports h3 {
+  font-size: 18px;
+  color: #3f83b4;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.report {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff2b8;
+  padding: 15px 20px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+.report div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.report label {
+  font-size: 14px;
+  color: #555;
+}
+
+.report span {
+  font-size: 16px;
+  color: #3f83b4;
+  font-weight: 500;
+}

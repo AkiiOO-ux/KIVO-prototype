@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management | kivo</title>
+  <link rel="stylesheet" href="employees.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>EMPLOYEE MANAGEMENT</h1>
+    <div class="right-header">
+      <div class="logo">kivo</div>
+      <button class="logout-btn" onclick="window.location.href='login.html'">Logout</button>
+    </div>
+  </header>
+
+  <!-- 🔹 Back Button -->
+  <button class="back-btn" onclick="window.history.back()">&lt; Back</button>
+
+  <main class="container">
+    <section class="grid">
+      <!-- STAFF ACCOUNTS -->
+      <div class="card staff-accounts">
+        <h2>STAFF ACCOUNTS</h2>
+        <div class="staff-list">
+          <div class="staff">
+            <div class="avatar"></div>
+            <div>
+              <h3>Lara Mendoza</h3>
+              <p>Store Owner / Manager</p>
+              <span>Emp. ID: LVZ-001</span>
+            </div>
+          </div>
+          <div class="staff">
+            <div class="avatar"></div>
+            <div>
+              <h3>Paolo Villanueva</h3>
+              <p>Sales Supervisor</p>
+              <span>Emp. ID: PVL-002</span>
+            </div>
+          </div>
+          <div class="staff">
+            <div class="avatar"></div>
+            <div>
+              <h3>Mia Soriano</h3>
+              <p>Cashier</p>
+              <span>Emp. ID: MSR-003</span>
+            </div>
+          </div>
+          <div class="staff">
+            <div class="avatar"></div>
+            <div>
+              <h3>Diego Alcaraz</h3>
+              <p>Inventory Clerk</p>
+              <span>Emp. ID: DGA-004</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROLE PERMISSIONS -->
+      <div class="card role-permissions">
+        <h2>ROLE PERMISSIONS</h2>
+        <div class="permissions">
+          <div class="perm-item">POS Access <div class="toggle active"></div></div>
+          <div class="perm-item">Inventory Access <div class="toggle active"></div></div>
+          <div class="perm-item">Reports Access <div class="toggle active"></div></div>
+          <div class="perm-item">Employee Management Access <div class="toggle active"></div></div>
+        </div>
+      </div>
+
+      <!-- COMMISSION MONITORING -->
+      <div class="card commission-monitor">
+        <h2>COMMISSION MONITORING</h2>
+        <div class="commission-entry">
+          <div class="avatar"></div>
+          <div>
+            <h3>Paolo Villanueva</h3>
+            <p>Total Sales: ₱85,000</p>
+          </div>
+          <div class="rate">5%</div>
+          <div class="amount">₱4,250</div>
+        </div>
+        <div class="commission-entry">
+          <div class="avatar"></div>
+          <div>
+            <h3>Mia Soriano</h3>
+            <p>Total Sales: ₱48,500</p>
+          </div>
+          <div class="rate">2%</div>
+          <div class="amount">₱970</div>
+        </div>
+      </div>
+
+      <!-- SALES TRACKING TABLE -->
+      <div class="card sales-table">
+        <h2>SALES TRACKING</h2>
+        <table>
+          <tr><th>Staff</th><th>Total Sales</th><th>Avg. per day</th><th>Refunds Processed</th></tr>
+          <tr><td>Paolo Villanueva</td><td>₱85,000</td><td>₱14,166</td><td>3</td></tr>
+          <tr><td>Mia Soriano</td><td>₱48,500</td><td>₱6,928</td><td>1</td></tr>
+        </table>
+      </div>
+
+      <!-- SALES CHART (separate box) -->
+      <div class="card sales-chart">
+        <canvas id="salesChart"></canvas>
+      </div>
+    </section>
+
+    <button class="add-btn">Add Employee</button>
+  </main>
+
+  <script src="employees.js"></script>
+</body>
+</html>
