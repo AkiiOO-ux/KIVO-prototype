@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #869AA3, #B9E3FF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+
+
+.login-box {
+    background-color: #5CA2CD;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.dashboard-bar {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: -20px -20px 20px -20px;
+    font-weight: bold;
+}
+
+.dashboard-bar .left-text {
+    color: #33A1E0;
+    text-transform: uppercase;
+}
+
+.dashboard-bar .right-text {
+    color: #33A1E0;
+    text-transform: uppercase;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 28px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+    width: 90%;         
+    margin-left: 65px;
+    margin-right: auto;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 70%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 65px; 
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.remember input[type="checkbox"] {
+    margin: 0;
+}
+
+.remember label {
+    display: inline; 
+    width: auto;
+    margin: 0;
+    color: white;
+    font-size: 14px;
+}
+
+
+
+button {
+    background-color: white;
+    color: #33A1E0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold; 
+    width: 110px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+.create-account {
+    margin-top: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.create-account:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
