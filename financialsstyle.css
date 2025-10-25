@@ -60,6 +60,20 @@ body {
     flex-direction: column;
     gap: 30px;
 }
+.back-btn {
+    background-color: transparent;
+    border: none;
+    color: White;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    margin-left: 20px;
+    width: 50px;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
 
 /* Box rows */
 .box-row {
@@ -177,114 +191,114 @@ body {
     gap: 30px;
 }
 /* PAYMENT BOX DESIGN */
-        .payment-box {
-            background-color: #5CA2CD;
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            width: 100%;
-            max-width: 500px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(255,255,255,0.3);
-        }
+.payment-box {
+    background-color: #5CA2CD;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
 
-        .payment-box h2 {
-            font-size: 22px;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-        }
+.payment-box h2 {
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
 
-        /* Payment icons */
-        .payment-methods {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-        }
+/* Payment icons */
+.payment-methods {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
 
-        .payment-method {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 13px;
-            gap: 6px;
-        }
+.payment-method {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    gap: 6px;
+}
 
-        .payment-method img {
-            width: 40px;
-            height: 40px;
-            background-color: white;
-            border-radius: 8px;
-            padding: 8px;
-        }
+.payment-method img {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 8px;
+}
 
-        /* Card section */
-        .card-section {
-            background-color: #d5c8eb;
-            padding: 25px;
-            border-radius: 15px;
-            margin: 20px 0;
-            position: relative;
-        }
+/* Card section */
+.card-section {
+    background-color: #d5c8eb;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px 0;
+    position: relative;
+}
 
-        .card-section img {
-            width: 100px;
-            opacity: 0.7;
-        }
+.card-section img {
+    width: 100px;
+    opacity: 0.7;
+}
 
-        .card-section .status {
-            margin-top: 10px;
-            color: #3c3c3c;
-            font-weight: 600;
-            font-size: 14px;
-        }
+.card-section .status {
+    margin-top: 10px;
+    color: #3c3c3c;
+    font-weight: 600;
+    font-size: 14px;
+}
 
-        .card-section .checkmark {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background-color: #4CAF50;
-            color: white;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
+.card-section .checkmark {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #4CAF50;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
 
-        /* Cash Section */
-        .cash-section {
-            margin-top: 25px;
-            text-align: left;
-        }
+/* Cash Section */
+.cash-section {
+    margin-top: 25px;
+    text-align: left;
+}
 
-        .cash-section h3 {
-            margin-bottom: 10px;
-            font-size: 18px;
-            letter-spacing: 1px;
-        }
+.cash-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
 
-        .cash-inputs {
-            display: flex;
-            justify-content: space-between;
-        }
+.cash-inputs {
+    display: flex;
+    justify-content: space-between;
+}
 
-        .cash-inputs div {
-            display: flex;
-            flex-direction: column;
-            width: 48%;
-        }
+.cash-inputs div {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
 
-        .cash-inputs label {
-            font-size: 13px;
-            margin-bottom: 5px;
-        }
+.cash-inputs label {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
 
-        .cash-inputs input {
-            padding: 8px;
-            border-radius: 6px;
-            border: none;
-            text-align: right;
-            font-size: 14px;
-        }
+.cash-inputs input {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    text-align: right;
+    font-size: 14px;
+}

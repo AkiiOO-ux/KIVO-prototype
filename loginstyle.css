@@ -90,6 +90,11 @@ input[type="text"], input[type="email"], input[type="password"] {
     font-size: 14px;
 }
 
+button {
+    display: block;
+    margin: 10px auto; /* adds spacing between each element */
+    width: 70%;        /* same width as your other inputs */
+}
 
 
 button {

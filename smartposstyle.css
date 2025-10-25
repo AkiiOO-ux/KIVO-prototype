@@ -63,6 +63,21 @@ body {
     flex-wrap: wrap;           
     margin-top: 20px;
 }
+.back-btn {
+    background-color: transparent;
+    border: none;
+    color: #5CA2CD;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 45px;
+    width: 50px;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
 
 /* Box styling */
 .box {
