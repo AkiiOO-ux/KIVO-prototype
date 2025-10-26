@@ -7,25 +7,24 @@
   <link rel="stylesheet" href="inventory.css" />
 </head>
 <body>
-  <div class="page">
-    <header class="topbar">
-      <div class="left-top">
-        <div class="title"><h1>INVENTORY INTELLIGENCE</h1></div>
-      </div>
+  <!-- ✅ REPLACED NAVBAR -->
+  <div class="navbar">
+    <h1>INVENTORY INTELLIGENCE</h1>
+    <div class="right-nav">
+      <h1>kivo</h1>
+      <button class="logout-btn" onclick="window.location.href='Login.html'">Logout</button>
+    </div>
+  </div>
 
-      <div class="brand-right">
-        <div class="brand">kivo</div>
-        <button class="logout-btn" onclick="window.location.href='Login.html'">Logout</button>
-      </div>
-    </header>
+  <!-- Back Button -->
   <button class="back-btn" onclick="window.history.back()">&lt; Back</button>
+
+  <div class="page">
     <main class="layout">
       <!-- LEFT COLUMN: LOW STOCK ALERT (large) -->
       <section class="card low-stock">
         <div class="low-head">
           <div class="low-title">LOW STOCK ALERT!</div>
-
-          <!-- Add Product / Restock buttons (top-right of low-stock card) -->
           <div class="low-actions">
             <button class="btn small primary" id="addProductBtn">Add Product</button>
             <button class="btn small ghost" id="restockBtn">Restock</button>
@@ -38,101 +37,58 @@
         </div>
 
         <div class="low-list">
-          <!-- Coca-Cola 1L: clearer bottle image -->
           <article class="low-item">
             <img src="https://www.nicepng.com/png/detail/76-765915_coca-cola-1-l-bottle.png" alt="Coca-Cola 1L" />
-            <div class="li-meta">
-              <div class="li-name">Coca-Cola - 1L Bottle</div>
-            </div>
+            <div class="li-meta"><div class="li-name">Coca-Cola - 1L Bottle</div></div>
             <div class="li-qty">25</div>
           </article>
 
-          <!-- Sprite 330ml -->
           <article class="low-item">
             <img src="https://www.pngkit.com/png/detail/173-1735228_sprite-reg-in-can-330ml-sprite-can-330ml.png" alt="Sprite 330ml" />
-            <div class="li-meta">
-              <div class="li-name">Sprite - 330ml Can</div>
-            </div>
+            <div class="li-meta"><div class="li-name">Sprite - 330ml Can</div></div>
             <div class="li-qty">28</div>
           </article>
 
-          <!-- Summit water 500ml -->
           <article class="low-item">
             <img src="https://ip.prod.freshop.retail.ncrcloud.com/resize?url=https://images.freshop.ncrcloud.com/1564405684702535563/7f8bcad7702a91d92c3552b3e9f9e0b3_large.png&width=512&type=webp&quality=90" alt="Summit Water 500ml" />
-            <div class="li-meta">
-              <div class="li-name">Summit Water - 500ml Bottle</div>
-            </div>
+            <div class="li-meta"><div class="li-name">Summit Water - 500ml Bottle</div></div>
             <div class="li-qty">30</div>
           </article>
 
-          <!-- Century Tuna -->
           <article class="low-item">
             <img src="https://centurytuna.ph/wp-content/uploads/2020/12/flakes-in-oil-180g-REV-770x433.png" alt="Century Tuna" />
-            <div class="li-meta">
-              <div class="li-name">Century Tuna - Flakes in Oil</div>
-            </div>
+            <div class="li-meta"><div class="li-name">Century Tuna - Flakes in Oil</div></div>
             <div class="li-qty">30</div>
           </article>
 
-          <!-- Argentina Corned Beef -->
           <article class="low-item">
             <img src="https://shopmetro.ph/marketmarket-supermarket/wp-content/uploads/2021/03/SM9257330-1.jpg" alt="Argentina Corned Beef" />
-            <div class="li-meta">
-              <div class="li-name">Argentina - Corned Beef (150g)</div>
-            </div>
+            <div class="li-meta"><div class="li-name">Argentina - Corned Beef (150g)</div></div>
             <div class="li-qty">30</div>
           </article>
         </div>
       </section>
 
-      <!-- RIGHT COLUMN TOP: Multi-branch & Sales -->
+      <!-- RIGHT COLUMN -->
       <div class="right-top">
         <section class="card branch-card">
           <h3>MULTI-BRANCH SYNC</h3>
-
           <div class="branch-grid">
             <div class="branch">
-              <div class="branch-info">
-                <div class="b-title">Main Branch</div>
-                <div class="b-sub">San Roque - TSU</div>
-              </div>
-              <label class="switch">
-                <input type="checkbox" checked disabled />
-                <span></span>
-              </label>
+              <div class="branch-info"><div class="b-title">Main Branch</div><div class="b-sub">San Roque - TSU</div></div>
+              <label class="switch"><input type="checkbox" checked disabled /><span></span></label>
             </div>
-
             <div class="branch">
-              <div class="branch-info">
-                <div class="b-title">2nd Branch</div>
-                <div class="b-sub">SM</div>
-              </div>
-              <label class="switch">
-                <input type="checkbox" checked disabled />
-                <span></span>
-              </label>
+              <div class="branch-info"><div class="b-title">2nd Branch</div><div class="b-sub">SM</div></div>
+              <label class="switch"><input type="checkbox" checked disabled /><span></span></label>
             </div>
-
             <div class="branch">
-              <div class="branch-info">
-                <div class="b-title">3rd Branch</div>
-                <div class="b-sub">Metro Mall</div>
-              </div>
-              <label class="switch">
-                <input type="checkbox" checked disabled />
-                <span></span>
-              </label>
+              <div class="branch-info"><div class="b-title">3rd Branch</div><div class="b-sub">Metro Mall</div></div>
+              <label class="switch"><input type="checkbox" checked disabled /><span></span></label>
             </div>
-
             <div class="branch">
-              <div class="branch-info">
-                <div class="b-title">4th Branch</div>
-                <div class="b-sub">Luisita</div>
-              </div>
-              <label class="switch">
-                <input type="checkbox" disabled />
-                <span></span>
-              </label>
+              <div class="branch-info"><div class="b-title">4th Branch</div><div class="b-sub">Luisita</div></div>
+              <label class="switch"><input type="checkbox" disabled /><span></span></label>
             </div>
           </div>
         </section>
@@ -148,9 +104,7 @@
           </div>
 
           <div class="sales-figure">₱2,398.50</div>
-
-          <div class="chart-wrap" role="img" aria-label="Static sales chart">
-            <!-- SVG static curved-line -->
+          <div class="chart-wrap">
             <svg viewBox="0 0 520 130" preserveAspectRatio="none" class="chart-svg">
               <g stroke="#e6f5fb" stroke-width="1">
                 <line x1="0" y1="20" x2="520" y2="20"></line>
@@ -159,7 +113,6 @@
                 <line x1="0" y1="80" x2="520" y2="80"></line>
                 <line x1="0" y1="100" x2="520" y2="100"></line>
               </g>
-
               <path d="M10,95 C90,85 130,70 208,80 C260,90 320,45 385,65 C450,85 500,75 510,70"
                     fill="none" stroke="#1f7fb0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M10,95 C90,85 130,70 208,80 C260,90 320,45 385,65 C450,85 500,75 510,70 L510,130 L10,130 Z"
@@ -169,38 +122,18 @@
         </section>
       </div>
 
-      <!-- BOTTOM ROW: supplier dispatch (left) + delivery updates (right) -->
+      <!-- BOTTOM ROW -->
       <section class="card supplier-card">
         <h3>SUPPLIER DISPATCH LIST</h3>
-
         <table class="supplier-table">
           <thead>
             <tr>
-              <th>Supplier</th>
-              <th>Brand / Product</th>
-              <th>Contact</th>
-              <th>Next Delivery</th>
-              <th>Balance (₱)</th>
-              <th>Status</th>
+              <th>Supplier</th><th>Brand / Product</th><th>Contact</th><th>Next Delivery</th><th>Balance (₱)</th><th>Status</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Monde Nissin</td>
-              <td>Lucky Me!, SkyFlakes</td>
-              <td>Carla • 0917 235 8890</td>
-              <td>Oct 17, 2025</td>
-              <td>15,000</td>
-              <td><span class="pill on">Active</span></td>
-            </tr>
-            <tr>
-              <td>URC</td>
-              <td>Piattos, C2</td>
-              <td>Jason • 0998 441 7722</td>
-              <td>Oct 17, 2025</td>
-              <td>0</td>
-              <td><span class="pill on">Active</span></td>
-            </tr>
+            <tr><td>Monde Nissin</td><td>Lucky Me!, SkyFlakes</td><td>Carla • 0917 235 8890</td><td>Oct 17, 2025</td><td>15,000</td><td><span class="pill">Active</span></td></tr>
+            <tr><td>URC</td><td>Piattos, C2</td><td>Jason • 0998 441 7722</td><td>Oct 17, 2025</td><td>0</td><td><span class="pill">Active</span></td></tr>
           </tbody>
         </table>
       </section>
@@ -208,10 +141,9 @@
       <section class="card delivery-card">
         <h3>DELIVERY UPDATES</h3>
         <ul class="updates">
-          <li><strong>Oct 16, 2025 • 6:06 PM</strong> — CDO Foodsphere — Ulam Burger (25 packs), Chicken Franks (20 packs) — <em>Ric S.</em></li>
-          <li><strong>Oct 16, 2025 • 6:00 PM</strong> — Unilever — Surf Powder (20 boxes), Creamsilk (10 boxes) — <em>Jessia M.</em></li>
-          <li><strong>Oct 16, 2025 • 5:30 PM</strong> — Nestlé — Milo Sachets (30 boxes), Bear Brand Milk (20 boxes) — <em>Jessa M.</em></li>
-          <li><strong>Oct 16, 2025 • 11:30 AM</strong> — URC — Piattos Cheese (50 pcs), Chippy BBQ (40 pcs) — <em>Mark D.</em></li>
+          <li><strong>Oct 16, 2025 • 6:06 PM</strong> — CDO Foodsphere — Ulam Burger (25 packs)</li>
+          <li><strong>Oct 16, 2025 • 6:00 PM</strong> — Unilever — Surf Powder (20 boxes)</li>
+          <li><strong>Oct 16, 2025 • 5:30 PM</strong> — Nestlé — Milo Sachets (30 boxes)</li>
         </ul>
       </section>
     </main>

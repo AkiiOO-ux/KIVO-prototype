@@ -7,10 +7,14 @@
   <link rel="stylesheet" href="customers.css" />
 </head>
 <body>
-  <header>
-    <h1>CUSTOMER CONNECTION</h1>
-    <div class="logo">kivo</div>
-    <button class="logout-btn" onclick="logout()">Logout</button>
+  <header class="navbar">
+    <div class="nav-left">
+      <h1>CUSTOMER CONNECTION</h1>
+    </div>
+    <div class="nav-right">
+      <div class="logo">kivo</div>
+      <button class="logout-btn" onclick="window.location.href='Login.html'">Logout</button>
+    </div>
   </header>
 <button class="back-btn" onclick="window.history.back()">&lt; Back</button>
   <main class="container">
@@ -170,11 +174,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-function logout() {
-  if (confirm("Are you sure you want to logout?")) {
-    window.location.href = "login.html"; // Change this to your actual login page
-  }
-}
 </script>
 
 </body>

@@ -1,194 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Financial Insights</title>
-    <link rel="stylesheet" href="financialsstyle.css">
+  <meta charset="UTF-8">
+  <title>Financial Insights</title>
+  <link rel="stylesheet" href="financialsstyle.css">
 </head>
 <body>
-    <div class="navbar">
+  <div class="navbar">
     <h1>FINANCIAL INSIGHTS</h1>
-        <div class="right-nav">
-            <h1>kivo</h1>
-            <button class="logout-btn" onclick="window.location.href='Login.html'">Logout</button>
+    <div class="right-nav">
+      <h1>kivo</h1>
+      <button class="logout-btn" onclick="window.location.href='Login.html'">Logout</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <button class="back-btn" onclick="window.history.back()">&lt; Back</button>
+
+    <!-- FIRST ROW (Income Statement + Balance Sheet titles) -->
+    <div class="box-row">
+      <div class="box">
+        <div class="title-row">
+          <h2>Income Statement</h2>
+          <p>As of September 30, 2025</p>
         </div>
+      </div>
+      <div class="box">
+        <div class="title-row">
+          <h2>Balance Sheet</h2>
+          <p>As of September 30, 2025</p>
+        </div>
+      </div>
     </div>
 
-     <div class="content">
-        <button class="back-btn" onclick="window.history.back()">&lt; Back</button>
-        
-        <!-- Top row: two regular boxes -->
-        <div class="box-row">
-            <div class="box">
-                <div class="title-row">
-                    <h2>Income Statement</h2>
-                    <p>As of September 30, 2025</p>
-                </div>
-            </div>
-            <div class="box">
-                <div class="title-row">
-                    <h2>Balance Sheet</h2>
-                    <p>As of September 30, 2025</p>
-                </div>
-            </div>
+    <!-- SECOND ROW (Income + Balance content) -->
+    <div class="box-row">
+      <div class="box large">
+        <div class="card-body">
+          <div class="top-box">
+            <h2>Account</h2>
+            <h2>Amount(₱)</h2>
+          </div>
+
+          <h3>REVENUE</h3>
+          <div class="row"><span>Sales - Grocery Items</span><span>₱850,000</span></div>
+          <div class="row"><span>Sales - Frozen Goods</span><span>₱320,000</span></div>
+          <div class="row"><span>Sales - Beverages</span><span>₱180,000</span></div>
+          <div class="row"><span>Sales - Household Supplies</span><span>₱150,000</span></div>
+          <div class="divider"></div>
+          <div class="row bold"><span>Total Sales Revenue</span><span>₱1,500,000</span></div>
+          <div class="row"><span>Less: Sales Returns & Discounts</span><span>(₱20,000)</span></div>
         </div>
+      </div>
 
-        <!-- Bottom row: two larger boxes -->
-        <div class="box-row">
-            <div class="box large">
-                <div class="card-body">
-                    <div class="top-box">
-                        <h2>Account</h2>
-                        <h2>Amount(₱)</h2>
-                    </div>
-                    
+      <div class="box large">
+        <div class="card-body">
+          <div class="top-box">
+            <h2>Account</h2>
+            <h2>Amount(₱)</h2>
+          </div>
 
-                    <h3>REVENUE</h3>
-                    <div class="row">
-                        <span>Sales - Grocery Items</span>
-                        <span>₱850,000</span>
-                    </div>
-                    <div class="row">
-                        <span>Sales - Frozen Goods</span>
-                        <span>₱320,000</span>
-                    </div>
-                    <div class="row">
-                        <span>Sales - Beverages</span>
-                        <span>₱180,000</span>
-                    </div>
-                    <div class="row">
-                        <span>Sales - Household Supplies</span>
-                        <span>₱150,000</span>
-                    </div>
-
-                    <div class="divider"></div>
-                    <div class="row bold">
-                        <span>Total Sales Revenue</span>
-                        <span>₱1,500,000</span>
-                    </div>
-                    <div class="row">
-                        <span>Less: Sales Returns & Discounts</span>
-                        <span>(₱20,000)</span>
-                    </div>
-                </div>
-            </div>
-            <div class="box large">
-                <div class="card-body">
-                    <div class="top-box">
-                        <h2>Account</h2>
-                        <h2>Amount(₱)</h2>
-                    </div>
-                    <h3>ASSETS</h3>
-                    <h4>Current Assets</h4>
-                    <div class="row">
-                        <span>Cash on Hand and in Bank</span>
-                        <span>₱180,000</span>
-                    </div>
-                    <div class="row">
-                        <span>Accounts Receivable</span>
-                        <span>₱65,000</span>
-                    </div>
-                    <div class="row">
-                        <span>Inventory</span>
-                        <span>₱300,000</span>
-                    </div>
-                    <div class="row">
-                        <span>Prepaid Rent</span>
-                        <span>₱10,000</span>
-                    </div>
-
-                    <div class="divider"></div>
-                    <div class="row bold">
-                        <span>Total Current Assets</span>
-                        <span>₱555,000</span>
-                    </div>
-                </div>
-            </div>
+          <h3>ASSETS</h3>
+          <h4>Current Assets</h4>
+          <div class="row"><span>Cash on Hand and in Bank</span><span>₱180,000</span></div>
+          <div class="row"><span>Accounts Receivable</span><span>₱65,000</span></div>
+          <div class="row"><span>Inventory</span><span>₱300,000</span></div>
+          <div class="row"><span>Prepaid Rent</span><span>₱10,000</span></div>
+          <div class="divider"></div>
+          <div class="row bold"><span>Total Current Assets</span><span>₱555,000</span></div>
         </div>
+      </div>
     </div>
 
-    <div class="content2">
-        <!-- Top row: two regular boxes -->
-        <div class="box-row">
-            <div class="box">
-                <div class="title-row">
-                    <h2>Owner's Equity Statement</h2>
-                    <p>As of September 30, 2025</p>
-                </div>
-            </div>
-            <div class="box">
-                <div class="title-row">
-                    <h2>Cash Flow Statement</h2>
-                    <p>As of September 30, 2025</p>
-                </div>
-            </div>
+    <!-- THIRD ROW (Owner’s Equity + Cash Flow titles) -->
+    <div class="box-row">
+      <div class="box">
+        <div class="title-row">
+          <h2>Owner's Equity Statement</h2>
+          <p>As of September 30, 2025</p>
         </div>
-
-        <!-- Bottom row: two larger boxes -->
-        <div class="box-row">
-            <div class="box large">
-                <div class="card-body">
-                    <div class="top-box">
-                        <h2>Account</h2>
-                        <h2>Amount(₱)</h2>
-                    </div>
-                    
-                    <h3></h3>
-                    <div class="row">
-                        <span>Owner's Capital, Beginning</span>
-                        <span>₱150,000</span>
-                    </div>
-                    <div class="row">
-                        <span>Add: Additional Investment</span>
-                        <span>₱0</span>
-                    </div>
-                    <div class="row">
-                        <span>Add: New Income(for September2025)</span>
-                        <span>₱291200</span>
-                    </div>
-                    <div class="row">
-                        <span>Less: Withrawals / Drawings</span>
-                        <span>(₱47,400)</span>
-                    </div>
-
-                    <div class="divider"></div>
-                    <div class="row bold">
-                        <span>Owner's Capital, End of Period</span>
-                        <span>₱393,800</span>
-                    </div>
-                </div>
-            </div>
-            <div class="box large">
-                <div class="card-body">
-                    <div class="top-box">
-                        <h2>Account</h2>
-                        <h2>Amount(₱)</h2>      
-                    </div>
-                    <h4>CASH FLOWS FROM OPERATING ACTIVITIES</h4>
-                    <div class="row">
-                        <span>Cash Receipts from Customers</span>
-                        <span>₱1,460,000</span>
-                    </div>
-                    <div class="row">
-                        <span>Cash Payments to Suppliers and Employees</span>
-                        <span>(₱1,090,000)</span>
-                    </div>
-                    <div class="row">
-                        <span>Rent and Utilities Paid</span>
-                        <span>(₱95,000)</span>
-                    </div>
-                    <div class="row">
-                        <span>Taxes Paid</span>
-                        <span>(₱20,000)</span>
-                    </div>
-
-                    <div class="divider"></div>
-                    <div class="row bold">
-                        <span>Net Cash Provided by Operating Activities</span>
-                        <span>₱255,000</span>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="box">
+        <div class="title-row">
+          <h2>Cash Flow Statement</h2>
+          <p>As of September 30, 2025</p>
         </div>
+      </div>
     </div>
+
+    <!-- FOURTH ROW (Owner’s Equity + Cash Flow content) -->
+    <div class="box-row">
+      <div class="box large">
+        <div class="card-body">
+          <div class="top-box">
+            <h2>Account</h2>
+            <h2>Amount(₱)</h2>
+          </div>
+
+          <div class="row"><span>Owner's Capital, Beginning</span><span>₱150,000</span></div>
+          <div class="row"><span>Add: Additional Investment</span><span>₱0</span></div>
+          <div class="row"><span>Add: New Income (Sept 2025)</span><span>₱291,200</span></div>
+          <div class="row"><span>Less: Withdrawals / Drawings</span><span>(₱47,400)</span></div>
+          <div class="divider"></div>
+          <div class="row bold"><span>Owner's Capital, End of Period</span><span>₱393,800</span></div>
+        </div>
+      </div>
+
+      <div class="box large">
+        <div class="card-body">
+          <div class="top-box">
+            <h2>Account</h2>
+            <h2>Amount(₱)</h2>
+          </div>
+
+          <h4>CASH FLOWS FROM OPERATING ACTIVITIES</h4>
+          <div class="row"><span>Cash Receipts from Customers</span><span>₱1,460,000</span></div>
+          <div class="row"><span>Cash Payments to Suppliers and Employees</span><span>(₱1,090,000)</span></div>
+          <div class="row"><span>Rent and Utilities Paid</span><span>(₱95,000)</span></div>
+          <div class="row"><span>Taxes Paid</span><span>(₱20,000)</span></div>
+          <div class="divider"></div>
+          <div class="row bold"><span>Net Cash Provided by Operating Activities</span><span>₱255,000</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

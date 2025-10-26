@@ -21,11 +21,13 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 22px 40px;
+  flex-wrap: wrap;
 }
 
 header h1 {
   font-size: 22px;
   letter-spacing: 2px;
+  margin: 0;
 }
 
 .right-header {
@@ -55,11 +57,12 @@ header h1 {
   border: 2px solid var(--white);
   color: var(--white);
 }
+
 /* BACK BUTTON */
 .back-btn {
   background: none;
   border: none;
-  color: #5ca2cd;
+  color: var(--blue);
   font-size: 16px;
   cursor: pointer;
   margin: 25px 0 0 60px;
@@ -81,10 +84,12 @@ header h1 {
   gap: 25px;
 }
 
+/* CARD */
 .card {
   background-color: var(--white);
   border-radius: 12px;
   padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .card h2 {
@@ -107,6 +112,7 @@ header h1 {
   gap: 15px;
   padding: 10px 12px;
   margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 
 .avatar {
@@ -122,6 +128,7 @@ header h1 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
+  flex-wrap: wrap;
 }
 
 .toggle {
@@ -219,118 +226,103 @@ header h1 {
   padding: 12px 24px;
   font-weight: 600;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .add-btn:hover {
   background: #4a8eb5;
 }
 
-/* Mobile Responsive */
-@media (max-width: 980px) {
-  body {
-    padding: 0;
-  }
+/* ---------------- RESPONSIVE DESIGN ---------------- */
 
-  /* Header full width + stacking */
+/* Tablets */
+@media (max-width: 992px) {
   header {
+    flex-wrap: nowrap;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 16px 20px;
-    width: 100vw;
-    box-sizing: border-box;
+    text-align: center;
+    gap: 10px;
+    padding: 20px;
+    min-margin:auto;
   }
 
-  .right-header {
+  .container {
+    padding: 20px 30px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sales-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #salesChart {
+    height: 250px;
+  }
+
+  .staff-list .staff {
     flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 10px;
+    justify-content: flex-start;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+  .back-btn {
+    margin-left: 25px;
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 15px 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sales-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sales-table table,
+  .sales-table th,
+  .sales-table td {
+    font-size: 12px;
   }
 
   header h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .logo {
-    margin-left: 0;
     font-size: 24px;
   }
 
-  /* Back button smaller margin */
-  .back-btn {
-    margin-left: 20px;
-    margin-top: 15px;
-    font-size: 14px;
+  .logout-btn {
+    padding: 6px 12px;
+    font-size: 13px;
   }
 
-  /* Container padding smaller */
-  .container {
-    padding: 20px;
-  }
-
-  /* Grid layout stack */
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Stack cards vertically */
-    gap: 20px;
-  }
-
-  /* Staff list & cards spacing */
   .staff-list .staff {
     flex-direction: row;
-    gap: 10px;
-    padding: 8px 10px;
-  }
-
-  .staff h3, .staff p, .staff span {
+    justify-content: space-between;
     font-size: 13px;
   }
 
-  .card h2 {
-    font-size: 16px;
+  .avatar {
+    width: 40px;
+    height: 40px;
   }
 
-  /* Permissions toggle smaller */
-  .toggle {
-    width: 36px;
-    height: 18px;
-  }
-
-  .toggle::before {
-    width: 14px;
-    height: 14px;
-  }
-
-  .toggle.active::before {
-    left: 18px;
-  }
-
-  /* Commission section smaller */
-  .commission-entry {
-    grid-template-columns: 40px 1fr auto auto;
-    gap: 8px;
-  }
-
-  .rate, .amount {
-    font-size: 13px;
-  }
-
-  /* Sales table smaller font + scroll */
-  .sales-table table {
-    font-size: 12px;
-    display: block;
-    overflow-x: auto;
-    min-width: 400px;
-  }
-
-  /* Chart height smaller */
-  #salesChart {
-    height: 180px;
-  }
-
-  /* Add Employee button smaller */
   .add-btn {
-    padding: 10px 20px;
-    font-size: 14px;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  #salesChart {
+    height: 220px;
   }
 }

@@ -1,384 +1,189 @@
-/* Reset */
+/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Body */
+/* BODY */
 body {
-    background-color: #5CA2CD;
-    color: #333;
+  background-color: #5CA2CD;
+  color: #333;
 }
 
-/* Navbar */
+/* ===== NAVBAR ===== */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    color: white;
-    padding: 20px 40px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 20px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar h1 {
-    color: #5CA2CD;
-    font-size: 24px;
-    font-weight: 600;
-}
-/* Right side of navbar */
-.right-nav {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  color: #5CA2CD;
+  font-size: 24px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
-/* Logout Button */
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  white-space: nowrap;
+}
+
 .logout-btn {
-    background-color: #5CA2CD;
-    color: white;
-    border: none;
-    padding: 8px 18px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+  background-color: #5CA2CD;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .logout-btn:hover {
-    background-color: #4a8eb5;
-    transform: translateY(-2px);
+  background-color: #4a8eb5;
+  transform: translateY(-2px);
 }
 
-/* Content area */
-.content {
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
+/* ===== BACK BUTTON ===== */
 .back-btn {
-    background-color: transparent;
-    border: none;
-    color: White;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: left;
-    margin-left: 20px;
-    width: 50px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+  margin: 20px 0 0 40px;
+  width: 80px;
 }
 
 .back-btn:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* Box rows */
+/* ===== CONTENT ===== */
+.content, .content2 {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ===== BOXES ===== */
 .box-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-/* Boxes */
 .box {
-    background-color: white;
-    border-radius: 15px;
-    padding: 25px;
-    flex: 1;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  flex: 1;
+  min-width: 300px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .box:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
-.box.large {
-    flex: 1;
-}
-
-/* Box headers */
+/* HEADERS */
 .box h2 {
-    font-size: 22px;
-    color: #2b4c7e;
-    margin-bottom: 5px;
+  font-size: 22px;
+  color: #2b4c7e;
+  margin-bottom: 5px;
 }
 
 .box p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 15px;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
 }
 
-/* Card Body inside large boxes */
+/* CARD BODY */
 .card-body {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .card-body h3 {
-    font-size: 18px;
-    color: #2b4c7e;
-    margin-top: 10px;
-    margin-bottom: 15px;
+  font-size: 18px;
+  color: #2b4c7e;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .card-body h4 {
-    font-size: 16px;
-    color: #3d5a80;
-    margin: 15px 0 10px;
+  font-size: 16px;
+  color: #3d5a80;
+  margin: 15px 0 10px;
 }
 
-/* Rows for values */
+/* ROWS */
 .row {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-    font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
 }
 
 .row.bold {
-    font-weight: 600;
-    color: #2b4c7e;
+  font-weight: 600;
+  color: #2b4c7e;
 }
 
-/* Divider */
+/* DIVIDER */
 .divider {
-    border-bottom: 2px solid #2b4c7e;
-    margin: 15px 0;
+  border-bottom: 2px solid #2b4c7e;
+  margin: 15px 0;
 }
 
-.title-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.title-row h2 {
-    margin: 0;
-    font-size: 20px;
-}
-
-.title-row p {
-    margin: 0;
-    font-size: 14px;
-    color: #666;
-}
+/* TOP BOX (HEADERS IN LARGE BOXES) */
 .top-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f3f3f3; 
-    padding: 10px 15px;
-    border-bottom: 2px solid #ccc;
-    border-radius: 6px 6px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f3f3f3; 
+  padding: 10px 15px;
+  border-bottom: 2px solid #ccc;
+  border-radius: 6px 6px 0 0;
 }
 
 .top-box h2 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 600;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
 }
 
-.content2 {
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-/* PAYMENT BOX DESIGN */
-.payment-box {
-    background-color: #5CA2CD;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+/* TITLE ROW (FOR SMALL BOXES ABOVE LARGE ONES) */
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.payment-box h2 {
-    font-size: 22px;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
+.title-row h2 {
+  font-size: 20px;
+  color: #2b4c7e;
 }
 
-/* Payment icons */
-.payment-methods {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+.title-row p {
+  font-size: 14px;
+  color: #666;
 }
 
-.payment-method {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 13px;
-    gap: 6px;
-}
 
-.payment-method img {
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    border-radius: 8px;
-    padding: 8px;
-}
-
-/* Card section */
-.card-section {
-    background-color: #d5c8eb;
-    padding: 25px;
-    border-radius: 15px;
-    margin: 20px 0;
-    position: relative;
-}
-
-.card-section img {
-    width: 100px;
-    opacity: 0.7;
-}
-
-.card-section .status {
-    margin-top: 10px;
-    color: #3c3c3c;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.card-section .checkmark {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: #4CAF50;
-    color: white;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-}
-
-/* Cash Section */
-.cash-section {
-    margin-top: 25px;
-    text-align: left;
-}
-
-.cash-section h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    letter-spacing: 1px;
-}
-
-.cash-inputs {
-    display: flex;
-    justify-content: space-between;
-}
-
-.cash-inputs div {
-    display: flex;
-    flex-direction: column;
-    width: 48%;
-}
-
-.cash-inputs label {
-    font-size: 13px;
-    margin-bottom: 5px;
-}
-
-.cash-inputs input {
-    padding: 8px;
-    border-radius: 6px;
-    border: none;
-    text-align: right;
-    font-size: 14px;
-}
-
-/* Mobile Responsive Fix */
-@media (max-width: 980px) {
-    /* Reduce padding and spacing for smaller screens */
-    .content, .content2 {
-        padding: 20px;
-        gap: 20px;
-    }
-
-    /* Stack box rows vertically */
-    .box-row {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    /* Boxes take full width */
-    .box, .box.large {
-        width: 100%;
-        flex: none; /* disable flex-grow */
-    }
-
-    /* Adjust back button alignment */
-    .back-btn {
-        margin-left: 0;
-        width: auto;
-    }
-
-    /* Reduce padding inside boxes */
-    .box, .box.large {
-        padding: 15px;
-    }
-
-    /* Adjust heading sizes */
-    .box h2 {
-        font-size: 20px;
-    }
-    .card-body h3 {
-        font-size: 16px;
-    }
-    .card-body h4 {
-        font-size: 14px;
-    }
-    .row {
-        font-size: 14px;
-    }
-    .top-box h2 {
-        font-size: 16px;
-    }
-
-    /* Payment section adjustments */
-    .payment-box {
-        padding: 15px;
-    }
-    .payment-methods {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    .payment-method img {
-        width: 35px;
-        height: 35px;
-        padding: 6px;
-    }
-
-    /* Card section adjustments */
-    .card-section {
-        padding: 15px;
-    }
-    .card-section img {
-        width: 80px;
-    }
-
-    /* Cash section inputs stack */
-    .cash-inputs {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .cash-inputs div {
-        width: 100%;
-    }
-}
