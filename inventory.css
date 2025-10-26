@@ -42,12 +42,15 @@ body {
   background-color: #5CA2CD;
   padding: 20px 40px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: nowrap; 
 }
 
 .navbar h1 {
   color: white;
   font-size: 24px;
   font-weight: 600;
+   margin: 0;
+  flex-shrink: 0
 }
 
 /* Right side of navbar */
@@ -55,8 +58,13 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
+  flex-shrink: 0;
 }
-
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+}
 /* Logout Button */
 .logout-btn {
   background-color: white;
@@ -92,7 +100,7 @@ body {
 /* RESPONSIVE NAV */
 @media (max-width: 700px) {
   .navbar {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     gap: 10px;
     padding: 16px 20px;
