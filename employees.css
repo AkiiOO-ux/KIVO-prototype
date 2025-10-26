@@ -224,3 +224,113 @@ header h1 {
 .add-btn:hover {
   background: #4a8eb5;
 }
+
+/* Mobile Responsive */
+@media (max-width: 980px) {
+  body {
+    padding: 0;
+  }
+
+  /* Header full width + stacking */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 20px;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .right-header {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  .logo {
+    margin-left: 0;
+    font-size: 24px;
+  }
+
+  /* Back button smaller margin */
+  .back-btn {
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+
+  /* Container padding smaller */
+  .container {
+    padding: 20px;
+  }
+
+  /* Grid layout stack */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack cards vertically */
+    gap: 20px;
+  }
+
+  /* Staff list & cards spacing */
+  .staff-list .staff {
+    flex-direction: row;
+    gap: 10px;
+    padding: 8px 10px;
+  }
+
+  .staff h3, .staff p, .staff span {
+    font-size: 13px;
+  }
+
+  .card h2 {
+    font-size: 16px;
+  }
+
+  /* Permissions toggle smaller */
+  .toggle {
+    width: 36px;
+    height: 18px;
+  }
+
+  .toggle::before {
+    width: 14px;
+    height: 14px;
+  }
+
+  .toggle.active::before {
+    left: 18px;
+  }
+
+  /* Commission section smaller */
+  .commission-entry {
+    grid-template-columns: 40px 1fr auto auto;
+    gap: 8px;
+  }
+
+  .rate, .amount {
+    font-size: 13px;
+  }
+
+  /* Sales table smaller font + scroll */
+  .sales-table table {
+    font-size: 12px;
+    display: block;
+    overflow-x: auto;
+    min-width: 400px;
+  }
+
+  /* Chart height smaller */
+  #salesChart {
+    height: 180px;
+  }
+
+  /* Add Employee button smaller */
+  .add-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

@@ -302,3 +302,83 @@ body {
     text-align: right;
     font-size: 14px;
 }
+
+/* Mobile Responsive Fix */
+@media (max-width: 980px) {
+    /* Reduce padding and spacing for smaller screens */
+    .content, .content2 {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    /* Stack box rows vertically */
+    .box-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Boxes take full width */
+    .box, .box.large {
+        width: 100%;
+        flex: none; /* disable flex-grow */
+    }
+
+    /* Adjust back button alignment */
+    .back-btn {
+        margin-left: 0;
+        width: auto;
+    }
+
+    /* Reduce padding inside boxes */
+    .box, .box.large {
+        padding: 15px;
+    }
+
+    /* Adjust heading sizes */
+    .box h2 {
+        font-size: 20px;
+    }
+    .card-body h3 {
+        font-size: 16px;
+    }
+    .card-body h4 {
+        font-size: 14px;
+    }
+    .row {
+        font-size: 14px;
+    }
+    .top-box h2 {
+        font-size: 16px;
+    }
+
+    /* Payment section adjustments */
+    .payment-box {
+        padding: 15px;
+    }
+    .payment-methods {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .payment-method img {
+        width: 35px;
+        height: 35px;
+        padding: 6px;
+    }
+
+    /* Card section adjustments */
+    .card-section {
+        padding: 15px;
+    }
+    .card-section img {
+        width: 80px;
+    }
+
+    /* Cash section inputs stack */
+    .cash-inputs {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .cash-inputs div {
+        width: 100%;
+    }
+}

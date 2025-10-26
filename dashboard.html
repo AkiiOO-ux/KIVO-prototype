@@ -82,10 +82,30 @@
       padding:0 18px;
     }
 
+    /* Top grid (first 3 columns) */
     .grid {
       display:grid;
       grid-template-columns:1.4fr 1fr 1fr;
       gap:var(--gap);
+    }
+    /* Responsive Fix for Smart POS → Compliance and Security */
+    @media (max-width:980px) {
+      .bottom-row {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        align-items: stretch;
+      }
+
+      .bottom-row .card {
+        width: 100%;
+      }
+
+      /* Optional: keep consistent spacing with top grid */
+      .bottom-row .card:nth-child(-n+3) {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 10px;
+      }
     }
 
     /* Cards */
@@ -126,6 +146,7 @@
       justify-content:space-between;
     }
 
+    /* Middle section (next 3 cards) */
     .midgrid {
       grid-column:1 / span 3;
       display:grid;
@@ -195,17 +216,37 @@
       opacity:0.95;
     }
 
-    /* Responsive */
+    /* Responsive Fix */
     @media (max-width:980px) {
-      .grid { grid-template-columns:1fr; }
-      .chart-card { grid-column:1; }
-      .midgrid { grid-template-columns:1fr; }
+      /* Stack all cards consistently */
+      .grid {
+        display:flex;
+        flex-direction:column;
+      }
+
+      .chart-card,
+      .smallcard,
+      .midgrid .card {
+        width:100%;
+      }
+
+      /* Make midgrid single-column like the top ones */
+      .midgrid {
+        display:flex;
+        flex-direction:column;
+      }
+
       .bottom-row {
-        flex-direction:row;
+        flex-wrap:nowrap;
         overflow-x:auto;
+        gap:10px;
         padding-bottom:8px;
       }
-      .bigbtn { min-width:160px; }
+
+      .bigbtn {
+        min-width:160px;
+        flex:0 0 auto;
+      }
     }
 
     /* Visual-only chart styles */
@@ -244,10 +285,10 @@
 
 <body>
   <header>
-    <h1>HOME DASHBOARD</h1>
+    <h1>DASHBOARD</h1>
     <div class="header-right">
       <div class="logo">kivo</div>
-      <button class="logout-btn" onclick="window.location.href='Login.html'">Logout</button>
+      <button class="logout-btn" onclick="logout()">Logout</button>
     </div>
   </header>
 
@@ -344,6 +385,11 @@
   </main>
 
   <script>
+    function logout() {
+      if (confirm("Are you sure you want to log out?")) {
+        window.location.href = "login.html";
+      }
+    }
 
     // draw mini line chart
     (function(){
