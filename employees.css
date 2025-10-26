@@ -238,12 +238,22 @@ header h1 {
 /* Tablets */
 @media (max-width: 992px) {
   header {
+    flex-direction: row;
     flex-wrap: nowrap;
-    flex-direction: column;
-    text-align: center;
+    justify-content: space-between;
+    align-items: center;
     gap: 10px;
     padding: 20px;
     min-margin:auto;
+    text-align: left;
+  }
+  header h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .right-header {
+    margin-left: auto;        /* keeps logo/logout on right */
   }
 
   .container {
