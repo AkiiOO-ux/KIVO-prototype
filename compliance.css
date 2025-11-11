@@ -26,22 +26,23 @@ body {
 }
 
 .back-btn {
-  background: none;
+  background-color: #ffffff;
+  color: #5CA2CD;
   border: none;
-  color: white;
-  font-size: 16px;
+  border-radius: 8px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  margin: 20px 0 10px 50px;
-  align-self: flex-start;
-  transition: color 0.3s ease, transform 0.2s ease;
+  padding: 8px 16px;
+  margin: 25px 0 0 70px;
+  transition: all 0.3s ease;
 }
 
 .back-btn:hover {
-  color: #dceefc;
-  transform: translateX(-3px);
-  text-decoration: underline;
+  background-color: #e0f0f8; /* light blue hover */
+  text-decoration: none;
 }
+
 
 /* HEADER */
 header {

@@ -7,6 +7,33 @@
   <link rel="stylesheet" href="employees.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+<!-- 🔹 ADD EMPLOYEE POPUP -->
+<div id="employeeModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Add New Employee</h2>
+    <form id="employeeForm">
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter full name" required>
+
+      <label>Position</label>
+      <input type="text" placeholder="Enter position" required>
+
+      <label>Employee ID</label>
+      <input type="text" placeholder="Enter ID (e.g., EMP-005)" required>
+
+      <label>Email</label>
+      <input type="email" placeholder="Enter email" required>
+
+      <label>Contact Number</label>
+      <input type="tel" placeholder="Enter contact number" required>
+
+      <button type="submit" class="submit-btn">Add Employee</button>
+    </form>
+    <p id="successMsg" class="success-msg">Employee added successfully!</p>
+  </div>
+</div>
+
 <body>
   <header>
     <h1>EMPLOYEE MANAGEMENT</h1>

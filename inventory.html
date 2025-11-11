@@ -6,6 +6,34 @@
   <title>Inventory Intelligence - Kivo</title>
   <link rel="stylesheet" href="inventory.css" />
 </head>
+
+<!-- ✅ ADD PRODUCT POPUP -->
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Add New Product</h2>
+    <form id="productForm">
+      <label>Product Name</label>
+      <input type="text" placeholder="Enter product name" required>
+
+      <label>Category</label>
+      <input type="text" placeholder="Enter category" required>
+
+      <label>Quantity in Stock</label>
+      <input type="number" placeholder="Enter quantity" required>
+
+      <label>Supplier</label>
+      <input type="text" placeholder="Enter supplier" required>
+
+      <label>Price (₱)</label>
+      <input type="number" placeholder="Enter price" required>
+
+      <button type="submit" class="submit-btn">Add Product</button>
+    </form>
+    <p id="successMsg" class="success-msg">Product added successfully!</p>
+  </div>
+</div>
+
 <body>
   <!-- ✅ REPLACED NAVBAR -->
   <div class="navbar">
@@ -76,19 +104,19 @@
           <div class="branch-grid">
             <div class="branch">
               <div class="branch-info"><div class="b-title">Main Branch</div><div class="b-sub">San Roque - TSU</div></div>
-              <label class="switch"><input type="checkbox" checked disabled /><span></span></label>
+              <label class="switch"><input type="checkbox" checked /><span></span></label>
             </div>
             <div class="branch">
               <div class="branch-info"><div class="b-title">2nd Branch</div><div class="b-sub">SM</div></div>
-              <label class="switch"><input type="checkbox" checked disabled /><span></span></label>
+              <label class="switch"><input type="checkbox" checked /><span></span></label>
             </div>
             <div class="branch">
               <div class="branch-info"><div class="b-title">3rd Branch</div><div class="b-sub">Metro Mall</div></div>
-              <label class="switch"><input type="checkbox" checked disabled /><span></span></label>
+              <label class="switch"><input type="checkbox" checked /><span></span></label>
             </div>
             <div class="branch">
               <div class="branch-info"><div class="b-title">4th Branch</div><div class="b-sub">Luisita</div></div>
-              <label class="switch"><input type="checkbox" disabled /><span></span></label>
+              <label class="switch"><input type="checkbox" checked /><span></span></label>
             </div>
           </div>
         </section>
@@ -148,5 +176,36 @@
       </section>
     </main>
   </div>
+  <script> 
+    // ADD PRODUCT MODAL
+    const productModal = document.getElementById("productModal");
+    const addProductBtn = document.getElementById("addProductBtn");
+    const closeBtn = document.querySelector(".close");
+    const productForm = document.getElementById("productForm");
+    const successMsg = document.getElementById("successMsg");
+
+    addProductBtn.addEventListener("click", () => {
+      productModal.style.display = "flex";
+      successMsg.style.display = "none";
+      productForm.reset();
+    });
+
+    closeBtn.addEventListener("click", () => {
+      productModal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === productModal) productModal.style.display = "none";
+    });
+
+    productForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      successMsg.style.display = "block";
+      setTimeout(() => {
+        productModal.style.display = "none";
+      }, 1500);
+    });
+
+  </script>
 </body>
 </html>

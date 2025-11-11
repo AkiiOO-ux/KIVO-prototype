@@ -1,399 +1,186 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Home Dashboard — Visual Replica</title>
-  <style>
-    :root {
-      --header-yellow: #f7e58a;
-      --bg: #e9f0f6;
-      --card-blue: #2f86a6;
-      --card-blue-deep: #1f6b86;
-      --accent: #ffd24a;
-      --white: #ffffff;
-      --muted: #cfe3eb;
-      --shadow: 0 8px 18px rgba(15, 30, 40, 0.12);
-      --radius: 12px;
-      --gap: 18px;
-      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background: var(--bg);
-      color: #083047;
-      font-family: 'Segoe UI', Roboto, sans-serif;
-    }
-
-    /* HEADER */
-    header {
-      width: 100%;
-      background: var(--header-yellow);
-      padding: 20px 32px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 4px solid rgba(0, 0, 0, 0.05);
-      box-sizing: border-box;
-      flex-wrap: wrap;
-    }
-
-    header h1 {
-      color: #1b5666;
-      font-weight: 700;
-      letter-spacing: 2px;
-      font-size: 22px;
-    }
-
-    /* RIGHT SIDE OF HEADER */
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo {
-      font-weight: 800;
-      color: #1b5666;
-      font-size: 26px;
-    }
-
-    .logout-btn {
-      background: #1f6b86;
-      color: #ffffff;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .logout-btn:hover {
-      background: #ffffff;
-      color: #1f6b86;
-      border: 2px solid #1f6b86;
-    }
-
-    /* CONTAINER */
-    .container {
-      max-width: 1200px;
-      margin: 26px auto;
-      padding: 0 18px;
-    }
-
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      gap: var(--gap);
-    }
-
-    /* CARD BASE */
-    .card {
-      background: var(--card-blue);
-      color: var(--white);
-      padding: 18px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      min-height: 80px;
-    }
-
-    .card.light {
-      background: linear-gradient(180deg, var(--card-blue), var(--card-blue-deep));
-    }
-
-    .card .title {
-      font-weight: 700;
-      font-size: 15px;
-      margin-bottom: 8px;
-      opacity: 0.95;
-    }
-
-    .card .muted {
-      font-size: 12px;
-      color: rgba(255, 255, 255, 0.8);
-    }
-
-    .chart-card {
-      grid-column: 1 / span 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .smallcard {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    /* MIDGRID */
-    .midgrid {
-      grid-column: 1 / span 3;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--gap);
-    }
-
-    .list {
-      margin: 6px 0 0;
-      padding: 6px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .list-item {
-      display: flex;
-      justify-content: space-between;
-      padding: 12px 6px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-    }
-
-    .list-item:last-child {
-      border-bottom: none;
-    }
-
-    .bottom-row {
-      grid-column: 1 / span 3;
-      display: flex;
-      gap: 14px;
-      margin-top: 6px;
-    }
-
-    .bigbtn {
-      flex: 1;
-      background: var(--card-blue);
-      color: var(--white);
-      padding: 18px;
-      border-radius: 14px;
-      text-align: center;
-      border: 4px solid rgba(255, 255, 255, 0.04);
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .bigbtn .icon {
-      height: 44px;
-      width: 44px;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.06);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 8px;
-    }
-
-    .bigbtn small {
-      display: block;
-      font-size: 13px;
-      opacity: 0.95;
-    }
-
-    /* VISUAL CHART STYLES */
-    .chart-canvas {
-      height: 220px;
-      border-radius: 10px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
-      display: flex;
-      align-items: flex-end;
-      padding: 14px;
-    }
-
-    .bars {
-      display: flex;
-      gap: 12px;
-      align-items: end;
-      height: 100%;
-      width: 100%;
-    }
-
-    .bar {
-      flex: 1;
-      border-radius: 6px;
-      background: rgba(255, 255, 255, 0.14);
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-    }
-
-    .linechart {
-      width: 100%;
-      height: 160px;
-    }
-
-    /* RESPONSIVE FIX */
-    @media (max-width: 980px) {
-      header {
-        flex-wrap: nowrap;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 16px 20px;
-      }
-
-      header h1 {
-        font-size: 18px;
-      }
-
-      .header-right {
-        gap: 8px;
-      }
-
-      .logo {
-        font-size: 20px;
-      }
-
-      .logout-btn {
-        font-size: 13px;
-        padding: 6px 12px;
-      }
-
-      .grid {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .midgrid {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .bottom-row {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 10px;
-        padding-bottom: 8px;
-      }
-
-      .bigbtn {
-        min-width: 160px;
-        flex: 0 0 auto;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+<!-- Profile Modal -->
+<div id="profileModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeProfileModal()">&times;</span>
+    
+    <div class="profile-popup">
+      <div class="profile-header">
+        <div class="avatar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="white" viewBox="0 0 24 24">
+            <path d="M12 12c2.761 0 5-2.239 5-5S14.761 2 12 2 7 4.239 7 7s2.239 5 5 5zm0 2c-3.86 0-7 3.14-7 7 0 .552.447 1 1 1h12c.553 0 1-.448 1-1 0-3.86-3.14-7-7-7z"/>
+          </svg>
+        </div>
+        <h2 class="username">Admin</h2>
+        <p class="position">Cashier</p>
+        <p class="shift">Shift: 8:00 AM - 4:00 PM | Status: On Shift</p>
+      </div>
+      
+      <div class="profile-actions">
+        <button onclick="checkIn()">Check In</button>
+        <button onclick="viewShiftHistory()">View Shift History</button>
+        <button onclick="changePassword()">Change Password</button>
+        <button onclick="changeUser()">Change User</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Notification Popup -->
+<div id="notificationPopup" class="notification-popup">
+  <div class="notif-header">
+    <h2>Notifications</h2>
+    <span class="close-notif" onclick="closeNotificationPopup()">&times;</span>
+  </div>
+
+  <div class="notif-content">
+    <div class="notif-item">
+      <h4>Subscription Update</h4>
+      <p>Your current plan: <b>Standard POS Access</b><br>
+      Renewal Date: <b>Nov 30, 2025</b></p>
+    </div>
+
+    <div class="notif-item">
+      <h4>System Alert</h4>
+      <p>A new version of KIVO POS Dashboard is available. Click “Settings” to update your system.</p>
+    </div>
+
+    <div class="notif-item">
+      <h4>Reminder</h4>
+      <p>Monthly sales report will be generated automatically on <b>Nov 15</b>.</p>
+    </div>
+  </div>
+</div>
 
 <body>
-  <header>
-    <h1>DASHBOARD</h1>
-    <div class="header-right">
-      <div class="logo">kivo</div>
-      <button class="logout-btn" onclick="window.location.href='Login.html'">Logout</button>
+  <div class="navbar">
+    <div class="left">
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+      <h1 class="logo">KIVO</h1>
+      <input type="text" class="search" placeholder="Search..." />
     </div>
-  </header>
 
-  <main class="container">
-    <section class="grid">
-      <div class="card chart-card light">
-        <div class="title">Real-time Summary</div>
-        <div style="display:flex;justify-content:space-between;align-items:center">
-          <div>
-            <div class="muted">Sales Today</div>
-            <div style="font-size:28px;font-weight:800;margin-top:6px">₱9,356.25</div>
+    <div class="center">
+      <h1 class="title">Dashboard</h1>
+    </div>
+
+    <div class="right">
+      <div class="notification" onclick="notificationClick()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+          <path d="M12 24c1.104 0 2-.897 2-2h-4c0 1.103.896 2 2 2zm6.364-6c-.002-.005-.002-.01-.004-.015C17.53 16.35 16 14.154 16 11V7c0-3.314-2.686-6-6-6S4 3.686 4 7v4c0 3.154-1.53 5.35-2.36 6.985-.002.005-.002.01-.004.015C1.264 18.235 1 18.644 1 19c0 1.105.896 2 2 2h18c1.104 0 2-.895 2-2 0-.356-.264-.765-.636-1z"/>
+        </svg>
+      </div>
+
+      <div class="profile" onclick="profileClick()">
+        <div class="avatar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+            <path d="M12 12c2.761 0 5-2.239 5-5S14.761 2 12 2 7 4.239 7 7s2.239 5 5 5zm0 2c-3.86 0-7 3.14-7 7 0 .552.447 1 1 1h12c.553 0 1-.448 1-1 0-3.86-3.14-7-7-7z"/>
+          </svg>
+        </div>
+        <span class="username">Admin</span>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+        <div id="sidebar">
+          <a href="smartpos.html"><i class="fa-solid fa-chart-column"></i> Smart POS</a>
+          <a href="inventory.html"><i class="fa-solid fa-boxes-stacked"></i> Inventory</a>
+          <a href="financials.html"><i class="fa-solid fa-money-bill-wave"></i> Financial Statements</a>
+          <a href="customers.html"><i class="fa-solid fa-users"></i> Customers</a>
+          <a href="employees.html"><i class="fa-solid fa-briefcase"></i> Employee Management</a>
+          <a href="analytics.html"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+          <a href="compliance.html"><i class="fa-solid fa-shield-halved"></i> Compliance</a>
+          <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+
+
+          <a href="login.html" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
+  </div>
+
+    <div class="content">
+      <!-- LEFT COLUMN -->
+      <div class="left-col">
+        <!-- SALES -->
+        <div id="sales" class="card">
+          <h2>Sales Overview</h2>
+          <div class="tabs">
+            <button class="active" onclick="updateChart('daily')">Daily</button>
+            <button onclick="updateChart('weekly')">Weekly</button>
+            <button onclick="updateChart('monthly')">Monthly</button>
           </div>
-          <div class="muted" style="text-align:right">Oct. 16</div>
+          <h3 class="sales-amount">₱9,356.25</h3>
+          <canvas id="salesChart" width="400" height="150"></canvas>
         </div>
-        <div style="margin-top:12px;">
-          <canvas id="miniLine" class="linechart"></canvas>
+
+        <!-- LOW STOCK ALERT -->
+        <div id="stock" class="card">
+          <h2>Low Stock Alert</h2>
+          <ul class="low-stock">
+            <li><span>Coca-Cola - 1L Bottle</span><span>25</span></li>
+            <li><span>Sprite - 330ml Can</span><span>28</span></li>
+            <li><span>Summit Water - 500ml Bottle</span><span>30</span></li>
+          </ul>
+        </div>
+
+        <!-- EXPENSE SUMMARY -->
+        <div id="expense" class="card hidden">
+            <h2>Expense Summary</h2>
+            <div class="pie-container">
+                <canvas id="expenseChart" width="120" height="120"></canvas>
+            </div>
+            <p>Profit: ₱6,000 | Expense: ₱3,356 | Starting Cash: ₱10,000</p>
         </div>
       </div>
 
-      <div class="card smallcard">
-        <div class="title">Loyalty Programs</div>
-        <div class="list">
-          <div class="list-item"><div>Sarah Martinez</div><div class="muted">420 pts</div></div>
-          <div class="list-item"><div>Tina Gomez</div><div class="muted">410 pts</div></div>
-          <div class="list-item"><div>Mark Dela Peña</div><div class="muted">305 pts</div></div>
+      <!-- RIGHT COLUMN -->
+      <div class="right-col">
+        <!-- PURCHASE HISTORY -->
+        <div id="purchase" class="card">
+          <h2>Purchase History</h2>
+          <table>
+            <tr><th>Date</th><th>Total (₱)</th><th>Mode</th><th>Points</th></tr>
+            <tr><td>Oct 7 2025</td><td>310</td><td>Cash</td><td>+17</td></tr>
+            <tr><td>Oct 8 2025</td><td>315</td><td>Cash</td><td>+13</td></tr>
+            <tr><td>Oct 9 2025</td><td>410</td><td>Cash</td><td>+15</td></tr>
+          </table>
         </div>
-      </div>
 
-      <div class="card smallcard">
-        <div style="display:flex;justify-content:space-between;align-items:center">
-          <div class="title">Profit Analysis</div>
-          <div style="font-size:26px;font-weight:800">34% ↑</div>
+        <!-- DELIVERY UPDATES -->
+        <div id="delivery" class="card">
+          <h2>Delivery Updates</h2>
+          <table>
+            <tr><th>Date & Time</th><th>Supplier</th><th>Product</th><th>Received By</th></tr>
+            <tr><td>Oct 10, 2025 - 9:00 AM</td><td>Pepsi Co.</td><td>Cola Bottles</td><td>Sarah M.</td></tr>
+            <tr><td>Oct 11, 2025 - 10:30 AM</td><td>Coca-Cola</td><td>Softdrinks</td><td>James L.</td></tr>
+          </table>
         </div>
-        <div class="chart-canvas" style="height:110px;margin-top:8px">
-          <div class="bars" id="barset"></div>
-        </div>
-      </div>
 
-      <div class="midgrid" style="margin-top:8px">
-        <div class="card">
-          <div class="title">LOW STOCK ALERT!</div>
-          <div class="list">
-            <div class="list-item"><div>Coca-Cola - 1L Bottle</div><div class="muted">25</div></div>
-            <div class="list-item"><div>Sprite - 330ml Can</div><div class="muted">28</div></div>
-            <div class="list-item"><div>Summit Water - 500ml</div><div class="muted">30</div></div>
+        <!-- Floating Chat Bubble -->
+        <div class="chat-bubble">
+          <h3>Chat Box</h3>
+          <div class="chat-messages">
+            <p><b>Sarah:</b> Delivery arrived.</p>
+            <p><b>Manager:</b> Great, log it in the system.</p>
+          </div>
+          <div class="chat-input">
+            <input type="text" placeholder="Type message..." />
+            <button>Send</button>
           </div>
         </div>
 
-        <div class="card">
-          <div class="title">Top Selling Products</div>
-          <div class="list">
-            <div class="list-item"><div>Lucky Me! Pancit Canton - Calamansi</div><div>₱2,458.00</div></div>
-            <div class="list-item"><div>Nescafé - 3-in-1 Original Blend</div><div>₱2,254.00</div></div>
-            <div class="list-item"><div>Coca-Cola - Original Taste</div><div>₱2,123.00</div></div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="title">Recent Activities</div>
-          <div class="list">
-            <div class="list-item"><div>Supplier Delivery Received - Piattos</div><div class="muted">18:20</div></div>
-            <div class="list-item"><div>Shelf Replenishment</div><div class="muted">16:42</div></div>
-            <div class="list-item"><div>Promo Acquired - Mrs. Cruz</div><div class="muted">14:02</div></div>
-          </div>
         </div>
       </div>
+    </div>
 
-      <div class="bottom-row">
-        <a class="bigbtn" href="smartpos.html"><div class="icon">📊</div><small>Smart POS</small></a>
-        <a class="bigbtn" href="inventory.html"><div class="icon">📦</div><small>Inventory</small></a>
-        <a class="bigbtn" href="financials.html"><div class="icon">💰</div><small>Financial Statements</small></a>
-        <a class="bigbtn" href="customers.html"><div class="icon">👥</div><small>Customers</small></a>
-        <a class="bigbtn" href="employees.html"><div class="icon">📈</div><small>Employee Management</small></a>
-        <a class="bigbtn" href="analytics.html"><div class="icon">📈</div><small>Analytics</small></a>
-        <a class="bigbtn" href="compliance.html"><div class="icon">🛡️</div><small>Compliance</small></a>
-      </div>
-    </section>
-  </main>
-
-  <script>
-    // draw mini line
-    (function(){
-      const c = document.getElementById('miniLine');
-      const dpr = window.devicePixelRatio||1;
-      const rect = c.getBoundingClientRect();
-      c.width = rect.width*dpr;
-      c.height = rect.height*dpr;
-      const ctx = c.getContext('2d');
-      ctx.scale(dpr,dpr);
-      const w=rect.width,h=rect.height,pts=14,vals=[];
-      for(let i=0;i<pts;i++)vals.push(0.25+0.6*Math.abs(Math.sin(i*0.35+0.2)));
-      ctx.strokeStyle='rgba(255,255,255,0.06)';ctx.lineWidth=1;
-      for(let i=0;i<=4;i++){ctx.beginPath();ctx.moveTo(0,h*(i/4));ctx.lineTo(w,h*(i/4));ctx.stroke();}
-      ctx.beginPath();ctx.lineWidth=2.5;ctx.strokeStyle='rgba(255,255,255,0.9)';ctx.fillStyle='rgba(255,255,255,0.06)';
-      for(let i=0;i<pts;i++){const x=(i/(pts-1))*w;const y=h-vals[i]*h*0.85;if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);}
-      ctx.stroke();ctx.lineTo(w,h);ctx.lineTo(0,h);ctx.closePath();ctx.fill();
-    })();
-
-    // bars
-    (function(){
-      const container=document.getElementById('barset');
-      for(let i=0;i<4;i++){
-        const b=document.createElement('div');
-        b.className='bar';
-        const h=[0.45,0.28,0.55,0.8][i]*100;
-        b.style.height=h+'%';
-        container.appendChild(b);
-      }
-    })();
-  </script>
+  <script src="dashboard.js"></script>
 </body>
 </html>

@@ -64,20 +64,28 @@ body {
     margin-top: 20px;
 }
 .back-btn {
-    background-color: transparent;
-    border: none;
+    background-color: white;
+    border: 2px solid #5CA2CD;
     color: #5CA2CD;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    text-align: left;
+    text-align: center;
     margin-top: 30px;
     margin-left: 45px;
-    width: 50px;
+    width: 90px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
 .back-btn:hover {
-    text-decoration: underline;
+    background-color: #5CA2CD;
+    color: white;
+    text-decoration: none;
+    transform: scale(1.05);
 }
+
 
 /* Box styling */
 .box {
@@ -136,7 +144,6 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
     color: white;
 }
 
@@ -382,7 +389,8 @@ td {
     border-radius: 10px;
     background-color: #E6F2F9;
     padding: 15px;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .transaction-table table {
@@ -432,4 +440,144 @@ td {
 .total-section .amount {
     font-size: 22px;
     font-weight: bold;
+}
+/* Adjust spacing below VAT row */
+.transaction-table tbody tr.vat-row td {
+    padding-bottom: 6px;
+}
+
+/* Remove extra bottom spacing from table */
+.transaction-table table {
+    margin-bottom: 0;
+}
+
+/* Highlighted total box */
+.total-box {
+    background-color: #ffffff;
+    color: #5CA2CD;
+    border: 3px solid #5CA2CD;
+    border-radius: 12px;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 15px;
+    font-weight: 700;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 30px;
+}
+
+.total-box h3 {
+    margin: 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.total-box p {
+    margin: 6px 0 0 0;
+    font-size: 28px;
+}
+
+.total-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.2);
+}
+/* Manual Entry Button */
+.manual-entry {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.manual-btn {
+  background-color: white;
+  border: 2px solid #fff;
+  color: #5CA2CD;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.manual-btn:hover {
+  background-color: #5CA2CD;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Modal Overlay */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Box */
+.modal-content {
+  position: relative;
+  background: white;
+  padding: 25px 20px 20px 20px;
+  border-radius: 10px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content h3 {
+  color: #5CA2CD;
+  margin-bottom: 15px;
+}
+
+.modal-content input {
+  width: 90%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+/* Submit button */
+.submit-btn {
+  background-color: #5CA2CD;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #4a8eb5;
+  transform: scale(1.05);
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 22px;
+  color: #777;
+  cursor: pointer;
+  transition: 0.2s ease;
+  z-index: 1001;
+}
+
+.close-btn:hover {
+  color: #333;
 }

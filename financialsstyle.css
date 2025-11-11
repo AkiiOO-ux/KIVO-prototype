@@ -55,19 +55,27 @@ body {
 
 /* ===== BACK BUTTON ===== */
 .back-btn {
-  background-color: transparent;
-  border: none;
-  color: white;
+  background-color: white;
+  border: 2px solid white;
+  color: #5CA2CD;
   font-size: 16px;
   cursor: pointer;
-  text-align: left;
+  text-align: center;
   margin: 20px 0 0 40px;
-  width: 80px;
+  width: 90px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .back-btn:hover {
-  text-decoration: underline;
+  background-color: #5CA2CD;
+  color: white;
+  transform: scale(1.05);
 }
+
+
 
 /* ===== CONTENT ===== */
 .content, .content2 {

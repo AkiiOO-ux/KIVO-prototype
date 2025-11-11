@@ -1,0 +1,762 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Body */
+body {
+    background-color: white;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5CA2CD;
+    padding: 20px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1100;
+}
+
+.navbar .left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+}
+.search {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+    width: 200px;
+}
+.center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.center .title {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.navbar .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    margin-right: 20px;
+    user-select: none; 
+}
+
+.hamburger:hover {
+    color: #FFD700; 
+}
+
+
+/* Notification circle */
+.notification {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+
+
+/* Profile */
+.profile {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    
+    cursor: pointer;
+}
+
+/* Avatar */
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.7);
+    overflow: hidden; /* ensure image stays inside circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* cover the circle */
+    display: block;
+}
+
+/* Username */
+.username {
+    color: white;
+    font-weight: 500;
+}
+
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    top: 70px; /* below navbar */
+    left: -250px;
+    width: 250px;
+    height: calc(100% - 70px);
+    background-color: #5CA2CD;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+#sidebar a.logout {
+    margin-top: auto; /* pushes logout to bottom */
+    background-color: #e74c3c; /* red background */
+    color: white;
+    text-align: center;
+    font-weight: 600;
+}
+
+#sidebar a.logout:hover {
+    background-color: #c0392b;
+    border-left: none;
+    padding-left: 20px; /* optional for uniform padding */
+}
+
+/* Active sidebar */
+#sidebar.active {
+    left: 0;
+}
+
+/* Sidebar links */
+#sidebar a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    font-size: 16px;
+    display: block;
+    transition: background 0.3s;
+}
+
+/* Hover effect */
+#sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-left: 4px solid white;
+    padding-left: 16px; /* small shift */
+}
+/* --- Dashboard Layout (Updated Design) --- */
+.content {
+  padding: 60px 50px; /* adds more top and side space */
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-gap: 40px;
+  background-color: #f6f9fc;
+  min-height: 100vh;
+}
+
+/* Column wrappers */
+.left-col, .right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Card styling (blue boxes) */
+.card {
+  background: #5CA2CD;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* Headings inside cards */
+.card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Sales */
+.tabs {
+  margin-bottom: 10px;
+}
+
+.tabs button {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 8px 16px;
+  margin-right: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.tabs button.active,
+.tabs button:hover {
+  background: #ffffff;
+  color: #5CA2CD;
+}
+
+.sales-amount {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 10px 0 15px;
+}
+
+/* Chart canvas */
+#salesChart {
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* Low stock */
+.low-stock {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+.low-stock li {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.15);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Pie Chart */
+.pie-chart {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(#f44336 0% 40%, #4caf50 40% 100%);
+  margin: 20px auto;
+  position: relative;
+}
+.pie-chart::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #5CA2CD;
+  border-radius: 50%;
+  top: 30px;
+  left: 30px;
+}
+.pie-container {
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center;     /* centers vertically if needed */
+    margin: 20px 0;
+}
+
+#expense p {
+  text-align: center;
+  margin-top: 10px;
+  color: #fff;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+table th {
+  background: rgba(255,255,255,0.3);
+  font-weight: 600;
+}
+
+table tr:nth-child(even) {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Floating Chat Bubble */
+.chat-bubble {
+  background: #5CA2CD;
+  color: #fff;
+  border-radius: 20px;
+  padding: 15px 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  max-width: 380px;
+  margin: 25px auto 0;
+  position: relative;
+}
+
+/* Tail (bubble effect) */
+.chat-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50px;
+  width: 0;
+  height: 0;
+  border-top: 15px solid #5CA2CD;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+/* Chat box content */
+.chat-bubble h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.chat-messages {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 10px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.chat-input {
+  display: flex;
+  margin-top: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 6px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.chat-input button {
+  margin-left: 5px;
+  padding: 6px 10px;
+  background: #fff;
+  color: #5CA2CD;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.chat-input button:hover {
+  background: #eaeaea;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+    padding: 80px 30px;
+  }
+}
+/* --- Mobile & Tablet Responsive --- */
+@media (max-width: 900px) {
+  /* Stack columns */
+  .content {
+    grid-template-columns: 1fr;
+    padding: 20px 15px;
+  }
+
+  /* Reduce gap between cards */
+  .left-col, .right-col {
+    gap: 20px;
+  }
+
+  /* Card padding */
+  .card {
+    padding: 20px;
+  }
+
+  /* Navbar adjustments */
+  .navbar {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+  }
+
+  .navbar .center {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+  .navbar .search {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Sidebar slides over */
+  #sidebar {
+    top: 0;
+    height: 100%;
+    left: -250px;
+    width: 250px;
+    padding-top: 60px;
+  }
+
+  #sidebar.active {
+    left: 0;
+  }
+
+  /* Sales chart full width */
+  #salesChart, #expenseChart {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Table adjustments */
+  table th, table td {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  table th {
+    font-size: 13px;
+  }
+
+  /* Chat bubble smaller */
+  .chat-bubble {
+    width: 95%;
+    max-width: 100%;
+    padding: 12px 15px;
+  }
+
+  .chat-bubble::after {
+    left: 30px;
+  }
+
+  .chat-messages {
+    max-height: 100px;
+  }
+
+  /* Tabs buttons smaller */
+  .tabs button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  /* Sales amount smaller */
+  .sales-amount {
+    font-size: 1.5em;
+  }
+}
+
+/* --- Extra small devices --- */
+@media (max-width: 500px) {
+  .navbar .left {
+    flex: 1 1 100%;
+    justify-content: space-between;
+  }
+
+  .navbar .center {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .navbar .search {
+    font-size: 12px;
+  }
+
+  .tabs button {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+
+  .sales-amount {
+    font-size: 1.3em;
+  }
+
+  .low-stock li {
+    font-size: 12px;
+  }
+
+  table th, table td {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+
+  .chat-input input {
+    font-size: 12px;
+  }
+
+  .chat-input button {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+@media (max-width: 900px) {
+  #sidebar {
+    top: 60px; /* stay below mobile navbar */
+    height: calc(100% - 60px);
+    left: -250px;
+    width: 250px;
+    padding-top: 20px; /* optional */
+  }
+}
+
+/* Modal overlay */
+.modal {
+    margin-top: 70px;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: #5CA2CD;
+  color: white;
+  margin: 8% auto;
+  padding: 25px 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 380px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close:hover {
+  color: #FFD700;
+}
+
+/* Avatar */
+.profile-popup .avatar {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+/* Text styles */
+.profile-popup h2.username {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 10px 0 5px;
+}
+
+.profile-popup p {
+  font-size: 0.9rem;
+  margin: 4px 0;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.profile-actions {
+  margin-top: 20px;
+}
+
+.profile-actions button {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #5CA2CD;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.profile-actions button:hover {
+  background-color: #e8f3fa;
+  transform: translateY(-2px);
+}
+
+/* Mobile-friendly */
+@media (max-width: 500px) {
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .profile-popup .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .profile-actions button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+/* Notification popup container */
+.notification-popup {
+  display: none;
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 320px;
+  max-width: 90%;
+  background-color: #5CA2CD;
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 9999;
+  overflow: hidden;
+  animation: slideDown 0.3s ease;
+}
+
+/* Slide-down animation */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Notification header */
+.notif-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #5CA2CD, #80C3E5);
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.notif-header h2 {
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.close-notif {
+  cursor: pointer;
+  font-size: 22px;
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.close-notif:hover {
+  color: #FFD700;
+}
+
+/* Notification content */
+.notif-content {
+  padding: 10px 15px 15px;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.notif-item {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.notif-item h4 {
+  margin: 0 0 5px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.notif-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Scrollbar styling */
+.notif-content::-webkit-scrollbar {
+  width: 6px;
+}
+.notif-content::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 5px;
+}
+
+/* Mobile-friendly */
+@media (max-width: 600px) {
+  .notification-popup {
+    right: 0;
+    top: 60px;
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .notif-header h2 {
+    font-size: 1rem;
+  }
+
+  .notif-item p {
+    font-size: 0.85rem;
+  }
+}

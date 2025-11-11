@@ -90,18 +90,26 @@ body {
 
 /* Back Button */
 .back-btn {
-  background: none;
-  border: none;
+  background-color: white;
+  border: 2px solid #5CA2CD;
   color: #5CA2CD;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
   margin-top: 100px;
   margin-left: 20px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
 .back-btn:hover {
-  text-decoration: underline;
+  background-color: #5CA2CD;
+  color: white;
+  text-decoration: none;
+  transform: scale(1.05);
 }
+
 
 /* RESPONSIVE NAV */
 @media (max-width: 700px) {
@@ -472,4 +480,88 @@ body {
     font-size: 12px;
     padding: 6px 8px;
   }
+}
+/* ✅ ADD PRODUCT MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(42, 58, 63, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: var(--white);
+  padding: 25px 35px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  position: relative;
+  animation: popIn 0.3s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content h2 {
+  color: var(--brand-color);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.modal-content label {
+  display: block;
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.submit-btn {
+  background-color: var(--brand-color);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #4a8eb5;
+}
+
+.close {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--brand-color);
+}
+
+.success-msg {
+  display: none;
+  margin-top: 10px;
+  color: green;
+  font-weight: 600;
+  text-align: center;
 }

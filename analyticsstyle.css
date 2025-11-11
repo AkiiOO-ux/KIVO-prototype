@@ -8,8 +8,8 @@
 
 /* Body */
 body {
-    background-color: #f7e58a;
-    color: #333;
+    background-color: #ffffff; /* white background */
+    color: white; /* default text inside boxes */
 }
 
 /* Navbar */
@@ -17,17 +17,18 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: #5CA2CD; /* top bar blue */
     color: white;
     padding: 20px 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar h1 {
-    color: #5CA2CD;
+    color: white;
     font-size: 24px;
     font-weight: 600;
 }
+
 /* Right side of navbar */
 .right-nav {
     display: flex;
@@ -52,18 +53,23 @@ body {
     background-color: #4a8eb5;
     transform: translateY(-2px);
 }
+
 /* Back Button */
 .back-btn {
-    background: none;
-    border: none;
-    color: #5CA2CD;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 25px 0 0 45px;
-    margin-left: 70px;
+  background-color: #5CA2CD; /* blue */
+  color: white; /* white text */
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 16px;
+  margin: 25px 0 0 70px;
+  transition: all 0.3s ease;
 }
+
 .back-btn:hover {
-    text-decoration: underline;
+  background-color: #4a8eb5;
 }
 
 /* Layout */
@@ -74,6 +80,7 @@ body {
     gap: 30px;
     padding: 30px;
 }
+
 .box-row {
     display: flex;
     justify-content: center;
@@ -81,8 +88,10 @@ body {
     flex-wrap: wrap;
     width: 100%;
 }
+
 .box {
-    background-color: #eaf3f9;
+    background-color: #5CA2CD; /* blue box */
+    color: white;
     width: 580px;
     min-height: 320px;
     border-radius: 20px;
@@ -92,7 +101,7 @@ body {
 
 /* TOP PRODUCTS */
 #top-products .title {
-    color: #4e9ec8;
+    color:white;
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 10px;
@@ -148,12 +157,12 @@ body {
 
 .bar-row span {
     font-size: 13px;
-    color: #333;
+    color: white;
     width: 260px;
 }
 
 .bar {
-    background-color: #d8e8f2;
+    background-color: white;
     border-radius: 8px;
     height: 20px;
     flex: 1;
@@ -162,7 +171,7 @@ body {
 }
 
 .fill {
-    background-color: #5CA2CD;
+    background-color: #f5d36a;
     height: 100%;
     border-radius: 8px;
     transition: width 0.6s ease;
@@ -281,7 +290,7 @@ body {
 }
 
 #branch-comparison h2 {
-    color: #5CA2CD;
+    color: white;
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -308,7 +317,7 @@ body {
 }
 
 #trend-forecasting h2 {
-    color: #5CA2CD;
+    color: white;
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 20px;
