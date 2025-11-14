@@ -1,0 +1,218 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #eaf2f8;
+  color: #333;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f5f8fa;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Header */
+header {
+  background-color: #2b7aa9;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #cbe6f6;
+}
+
+/* Back Button */
+.back-btn-container {
+  margin: 20px 0;
+}
+
+.back-btn {
+  color: #2b7aa9;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid #2b7aa9;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #d9ecfa;
+}
+
+/* Section Header */
+.backup-header h2 {
+  color: #2b7aa9;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Backup Controls */
+.backup-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 13px;
+  color: #4e4e4e;
+  margin-bottom: 5px;
+}
+
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fefefe;
+  font-size: 14px;
+  color: #333;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12'><polygon points='0,0 12,0 6,8' fill='%232b7aa9'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+select:focus {
+  outline: none;
+  border-color: #2b7aa9;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  gap: 15px;
+}
+
+.run-backup-btn {
+  background-color: #ffeb3b;
+  color: #333;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.run-backup-btn:hover {
+  background-color: #fdd835;
+}
+
+.restore-data-btn {
+  background-color: #2b7aa9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.restore-data-btn:hover {
+  background-color: #25658d;
+}
+
+/* Backup History */
+.backup-history {
+  background-color: #5ea7cf;
+  border-radius: 10px;
+  padding: 20px;
+  overflow-x: auto; /* horizontal scroll for small screens */
+}
+
+.backup-history table {
+  width: 100%;
+  min-width: 600px; /* ensures table doesn’t shrink too much */
+  border-collapse: collapse;
+  color: white;
+}
+
+.backup-history th {
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #cbe6f6;
+  padding-bottom: 10px;
+}
+
+.backup-history td {
+  padding: 12px 0;
+  font-size: 14px;
+  color: #eaf7ff;
+}
+
+.backup-history tr:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .backup-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .button-group {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+  .backup-controls {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 18px;
+  }
+  .logo {
+    font-size: 22px;
+  }
+  .backup-header h2 {
+    font-size: 18px;
+  }
+  select {
+    font-size: 13px;
+    padding: 8px;
+  }
+  .run-backup-btn,
+  .restore-data-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}

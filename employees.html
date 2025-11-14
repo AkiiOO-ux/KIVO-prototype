@@ -1,145 +1,276 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Employee Management | kivo</title>
-  <link rel="stylesheet" href="employees.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<!-- 🔹 ADD EMPLOYEE POPUP -->
-<div id="employeeModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Add New Employee</h2>
-    <form id="employeeForm">
-      <label>Full Name</label>
-      <input type="text" placeholder="Enter full name" required>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management | kivo</title>
+    <link rel="stylesheet" href="employees.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
 
-      <label>Position</label>
-      <input type="text" placeholder="Enter position" required>
+  <!-- 🔹 ADD EMPLOYEE POPUP -->
+  <div id="employeeModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Add New Employee</h2>
+      <form id="employeeForm">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter full name" required />
 
-      <label>Employee ID</label>
-      <input type="text" placeholder="Enter ID (e.g., EMP-005)" required>
+        <label>Position</label>
+        <input type="text" placeholder="Enter position" required />
 
-      <label>Email</label>
-      <input type="email" placeholder="Enter email" required>
+        <label>Employee ID</label>
+        <input type="text" placeholder="Enter ID (e.g., EMP-005)" required />
 
-      <label>Contact Number</label>
-      <input type="tel" placeholder="Enter contact number" required>
+        <label>Email</label>
+        <input type="email" placeholder="Enter email" required />
 
-      <button type="submit" class="submit-btn">Add Employee</button>
-    </form>
-    <p id="successMsg" class="success-msg">Employee added successfully!</p>
-  </div>
-</div>
+        <label>Contact Number</label>
+        <input type="tel" placeholder="Enter contact number" required />
 
-<body>
-  <header>
-    <h1>EMPLOYEE MANAGEMENT</h1>
-    <div class="right-header">
-      <div class="logo">kivo</div>
-      <button class="logout-btn" onclick="window.location.href='Login.html'">Logout</button>
+        <button type="submit" class="submit-btn">Add Employee</button>
+      </form>
+      <p id="successMsg" class="success-msg">Employee added successfully!</p>
     </div>
-  </header>
+  </div>
 
-  <!-- 🔹 Back Button -->
-  <button class="back-btn" onclick="window.history.back()">&lt; Back</button>
+  <body>
+    <header>
+      <h1>EMPLOYEE MANAGEMENT</h1>
+      <div class="right-header">
+        <div class="logo">kivo</div>
+        <button class="logout-btn" onclick="window.location.href='Login.html'">
+          Logout
+        </button>
+      </div>
+    </header>
 
-  <main class="container">
-    <section class="grid">
-      <!-- STAFF ACCOUNTS -->
-      <div class="card staff-accounts">
-        <h2>STAFF ACCOUNTS</h2>
-        <div class="staff-list">
-          <div class="staff">
-            <div class="avatar"></div>
-            <div>
-              <h3>Lara Mendoza</h3>
-              <p>Store Owner / Manager</p>
-              <span>Emp. ID: LVZ-001</span>
+    <!-- 🔹 Back Button -->
+    <button class="back-btn" onclick="window.location.href='dashboard.html'">&lt; Back</button>
+
+    <main class="container">
+      <section class="grid">
+        <!-- STAFF ACCOUNTS -->
+        <div class="card staff-accounts">
+          <h2>STAFF ACCOUNTS</h2>
+          <div class="staff-list">
+            <div class="staff">
+              <div class="avatar"></div>
+              <div>
+                <h3>Lara Mendoza</h3>
+                <p>Store Owner / Manager</p>
+                <span>Emp. ID: LVZ-001</span>
+              </div>
             </div>
-          </div>
-          <div class="staff">
-            <div class="avatar"></div>
-            <div>
-              <h3>Paolo Villanueva</h3>
-              <p>Sales Supervisor</p>
-              <span>Emp. ID: PVL-002</span>
+            <div class="staff">
+              <div class="avatar"></div>
+              <div>
+                <h3>Paolo Villanueva</h3>
+                <p>Sales Supervisor</p>
+                <span>Emp. ID: PVL-002</span>
+              </div>
             </div>
-          </div>
-          <div class="staff">
-            <div class="avatar"></div>
-            <div>
-              <h3>Mia Soriano</h3>
-              <p>Cashier</p>
-              <span>Emp. ID: MSR-003</span>
+            <div class="staff">
+              <div class="avatar"></div>
+              <div>
+                <h3>Mia Soriano</h3>
+                <p>Cashier</p>
+                <span>Emp. ID: MSR-003</span>
+              </div>
             </div>
-          </div>
-          <div class="staff">
-            <div class="avatar"></div>
-            <div>
-              <h3>Diego Alcaraz</h3>
-              <p>Inventory Clerk</p>
-              <span>Emp. ID: DGA-004</span>
+            <div class="staff">
+              <div class="avatar"></div>
+              <div>
+                <h3>Diego Alcaraz</h3>
+                <p>Inventory Clerk</p>
+                <span>Emp. ID: DGA-004</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- ROLE PERMISSIONS -->
-      <div class="card role-permissions">
-        <h2>ROLE PERMISSIONS</h2>
-        <div class="permissions">
-          <div class="perm-item">POS Access <div class="toggle active"></div></div>
-          <div class="perm-item">Inventory Access <div class="toggle active"></div></div>
-          <div class="perm-item">Reports Access <div class="toggle active"></div></div>
-          <div class="perm-item">Employee Management Access <div class="toggle active"></div></div>
-        </div>
-      </div>
-
-      <!-- COMMISSION MONITORING -->
-      <div class="card commission-monitor">
-        <h2>COMMISSION MONITORING</h2>
-        <div class="commission-entry">
-          <div class="avatar"></div>
-          <div>
-            <h3>Paolo Villanueva</h3>
-            <p>Total Sales: ₱85,000</p>
+        <!-- ROLE PERMISSIONS -->
+        <div class="card role-permissions">
+          <h2>ROLE PERMISSIONS</h2>
+          <div class="permissions">
+            <div class="perm-item">
+              POS Access <div class="toggle active"></div>
+            </div>
+            <div class="perm-item">
+              Inventory Access <div class="toggle active"></div>
+            </div>
+            <div class="perm-item">
+              Reports Access <div class="toggle active"></div>
+            </div>
+            <div class="perm-item">
+              Employee Management Access <div class="toggle active"></div>
+            </div>
           </div>
-          <div class="rate">5%</div>
-          <div class="amount">₱4,250</div>
         </div>
-        <div class="commission-entry">
-          <div class="avatar"></div>
-          <div>
-            <h3>Mia Soriano</h3>
-            <p>Total Sales: ₱48,500</p>
-          </div>
-          <div class="rate">2%</div>
-          <div class="amount">₱970</div>
+
+        <!-- SALES TRACKING TABLE -->
+        <div class="card sales-table">
+          <h2>SALES TRACKING</h2>
+          <table>
+            <tr>
+              <th>Staff</th>
+              <th>Total Sales</th>
+              <th>Avg. per day</th>
+              <th>Refunds Processed</th>
+            </tr>
+            <tr>
+              <td>Paolo Villanueva</td>
+              <td>₱85,000</td>
+              <td>₱14,166</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Mia Soriano</td>
+              <td>₱48,500</td>
+              <td>₱6,928</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Rina Lopez</td>
+              <td>₱42,800</td>
+              <td>₱7,133</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Alex Cruz</td>
+              <td>₱37,200</td>
+              <td>₱6,200</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Diego Alcaraz</td>
+              <td>₱33,950</td>
+              <td>₱5,658</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Lara Mendoza</td>
+              <td>₱96,300</td>
+              <td>₱16,050</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Angela Ramos</td>
+              <td>₱44,100</td>
+              <td>₱7,350</td>
+              <td>1</td>
+            </tr>
+          </table>
         </div>
-      </div>
 
-      <!-- SALES TRACKING TABLE -->
-      <div class="card sales-table">
-        <h2>SALES TRACKING</h2>
-        <table>
-          <tr><th>Staff</th><th>Total Sales</th><th>Avg. per day</th><th>Refunds Processed</th></tr>
-          <tr><td>Paolo Villanueva</td><td>₱85,000</td><td>₱14,166</td><td>3</td></tr>
-          <tr><td>Mia Soriano</td><td>₱48,500</td><td>₱6,928</td><td>1</td></tr>
-        </table>
-      </div>
+        <!-- EMPLOYEE HISTORY -->
+        <div class="card employee-history">
+          <h2>EMPLOYEE HISTORY (Time In / Time Out)</h2>
+          <table>
+            <tr>
+              <th>Employee</th>
+              <th>Date</th>
+              <th>Time In</th>
+              <th>Time Out</th>
+            </tr>
+            <tr>
+              <td>Paolo Villanueva</td>
+              <td>Nov 10, 2025</td>
+              <td>08:42 AM</td>
+              <td>06:03 PM</td>
+            </tr>
+            <tr>
+              <td>Mia Soriano</td>
+              <td>Nov 10, 2025</td>
+              <td>08:58 AM</td>
+              <td>06:12 PM</td>
+            </tr>
+            <tr>
+              <td>Diego Alcaraz</td>
+              <td>Nov 10, 2025</td>
+              <td>09:04 AM</td>
+              <td>05:55 PM</td>
+            </tr>
+            <tr>
+              <td>Rina Lopez</td>
+              <td>Nov 10, 2025</td>
+              <td>08:47 AM</td>
+              <td>06:06 PM</td>
+            </tr>
+            <tr>
+              <td>Alex Cruz</td>
+              <td>Nov 10, 2025</td>
+              <td>09:15 AM</td>
+              <td>05:42 PM</td>
+            </tr>
+            <tr>
+              <td>Lara Mendoza</td>
+              <td>Nov 10, 2025</td>
+              <td>08:30 AM</td>
+              <td>06:15 PM</td>
+            </tr>
+            <tr>
+              <td>Angela Ramos</td>
+              <td>Nov 10, 2025</td>
+              <td>08:55 AM</td>
+              <td>06:00 PM</td>
+            </tr>
+            <tr>
+              <td>Paolo Villanueva</td>
+              <td>Nov 9, 2025</td>
+              <td>08:43 AM</td>
+              <td>06:05 PM</td>
+            </tr>
+            <tr>
+              <td>Mia Soriano</td>
+              <td>Nov 9, 2025</td>
+              <td>09:01 AM</td>
+              <td>06:07 PM</td>
+            </tr>
+            <tr>
+              <td>Rina Lopez</td>
+              <td>Nov 9, 2025</td>
+              <td>08:52 AM</td>
+              <td>06:03 PM</td>
+            </tr>
+            <tr>
+              <td>Alex Cruz</td>
+              <td>Nov 9, 2025</td>
+              <td>09:20 AM</td>
+              <td>05:48 PM</td>
+            </tr>
+            <tr>
+              <td>Diego Alcaraz</td>
+              <td>Nov 9, 2025</td>
+              <td>08:59 AM</td>
+              <td>05:56 PM</td>
+            </tr>
+            <tr>
+              <td>Lara Mendoza</td>
+              <td>Nov 9, 2025</td>
+              <td>08:33 AM</td>
+              <td>06:20 PM</td>
+            </tr>
+            <tr>
+              <td>Angela Ramos</td>
+              <td>Nov 9, 2025</td>
+              <td>08:58 AM</td>
+              <td>06:02 PM</td>
+            </tr>
+            <tr>
+              <td>Rina Lopez</td>
+              <td>Nov 8, 2025</td>
+              <td>08:49 AM</td>
+              <td>06:10 PM</td>
+            </tr>
+          </table>
+        </div>
+      </section>
 
-      <!-- SALES CHART (separate box) -->
-      <div class="card sales-chart">
-        <canvas id="salesChart"></canvas>
-      </div>
-    </section>
+      <button class="add-btn">Add Employee</button>
+    </main>
 
-    <button class="add-btn">Add Employee</button>
-  </main>
-
-  <script src="employees.js"></script>
-</body>
-</html>
+    <script src="employees.js"></script>
+  </body>
+  </html>

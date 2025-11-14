@@ -1,0 +1,198 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #61a3c9;
+    margin: 0;
+    color: #1e4d68;
+}
+
+header {
+    background-color: #2d6b8e;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.logout {
+    background-color: #ffffff;
+    color: #2d6b8e;
+    border: 1px solid #2d6b8e;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.encryption-container {
+    width: 85%;
+    max-width: 1000px;
+    margin: 40px auto;
+    color: #2d6b8e;
+}
+
+.back-btn {
+    background-color: #2d6b8e;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.95em;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-weight: 600;
+    margin: 15px 0 20px 0;
+    text-align: center;
+}
+
+.status-box {
+    display: flex;
+    align-items: center;
+    background-color: #dfeef5;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.status-icon {
+    font-size: 2em;
+    color: #2d6b8e;
+    margin-right: 15px;
+}
+
+.encryption-panels {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.panel {
+    background-color: #dfeef5;
+    border-radius: 8px;
+    padding: 20px;
+    width: 48%;
+    box-sizing: border-box;
+}
+
+.panel h3 {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #2d6b8e;
+    text-align: center;
+}
+
+.toggle-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 0.95em;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #f6d86b;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.save-btn {
+    display: block;
+    margin: 30px auto;
+    background-color: #2d6b8e;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* MOBILE RESPONSIVE ONLY */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px; /* small spacing between h1 and button */
+    }
+
+    header h1 {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .logout {
+        flex: 0 0 auto; /* don't stretch, stay as wide as content */
+        margin-top: 0;
+    }
+
+    .encryption-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .status-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .status-icon {
+        margin: 0 0 10px 0;
+    }
+
+    .encryption-panels {
+        flex-direction: column;
+    }
+
+    .panel {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

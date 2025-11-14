@@ -15,33 +15,20 @@
   </div>
 
   <div class="content">
-    <button class="back-btn" onclick="window.history.back()">&lt; Back</button>
+    <button class="back-btn" onclick="window.location.href='dashboard.html'">&lt; Back</button>
 
-    <!-- FIRST ROW (Income Statement + Balance Sheet titles) -->
+    <!-- INCOME STATEMENT + BALANCE SHEET -->
     <div class="box-row">
-      <div class="box">
+      <div class="box large">
         <div class="title-row">
           <h2>Income Statement</h2>
           <p>As of September 30, 2025</p>
         </div>
-      </div>
-      <div class="box">
-        <div class="title-row">
-          <h2>Balance Sheet</h2>
-          <p>As of September 30, 2025</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECOND ROW (Income + Balance content) -->
-    <div class="box-row">
-      <div class="box large">
         <div class="card-body">
           <div class="top-box">
             <h2>Account</h2>
             <h2>Amount(₱)</h2>
           </div>
-
           <h3>REVENUE</h3>
           <div class="row"><span>Sales - Grocery Items</span><span>₱850,000</span></div>
           <div class="row"><span>Sales - Frozen Goods</span><span>₱320,000</span></div>
@@ -54,12 +41,15 @@
       </div>
 
       <div class="box large">
+        <div class="title-row">
+          <h2>Balance Sheet</h2>
+          <p>As of September 30, 2025</p>
+        </div>
         <div class="card-body">
           <div class="top-box">
             <h2>Account</h2>
             <h2>Amount(₱)</h2>
           </div>
-
           <h3>ASSETS</h3>
           <h4>Current Assets</h4>
           <div class="row"><span>Cash on Hand and in Bank</span><span>₱180,000</span></div>
@@ -72,31 +62,18 @@
       </div>
     </div>
 
-    <!-- THIRD ROW (Owner’s Equity + Cash Flow titles) -->
+    <!-- OWNER’S EQUITY + CASH FLOW -->
     <div class="box-row">
-      <div class="box">
+      <div class="box large">
         <div class="title-row">
           <h2>Owner's Equity Statement</h2>
           <p>As of September 30, 2025</p>
         </div>
-      </div>
-      <div class="box">
-        <div class="title-row">
-          <h2>Cash Flow Statement</h2>
-          <p>As of September 30, 2025</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- FOURTH ROW (Owner’s Equity + Cash Flow content) -->
-    <div class="box-row">
-      <div class="box large">
         <div class="card-body">
           <div class="top-box">
             <h2>Account</h2>
             <h2>Amount(₱)</h2>
           </div>
-
           <div class="row"><span>Owner's Capital, Beginning</span><span>₱150,000</span></div>
           <div class="row"><span>Add: Additional Investment</span><span>₱0</span></div>
           <div class="row"><span>Add: New Income (Sept 2025)</span><span>₱291,200</span></div>
@@ -107,12 +84,15 @@
       </div>
 
       <div class="box large">
+        <div class="title-row">
+          <h2>Cash Flow Statement</h2>
+          <p>As of September 30, 2025</p>
+        </div>
         <div class="card-body">
           <div class="top-box">
             <h2>Account</h2>
             <h2>Amount(₱)</h2>
           </div>
-
           <h4>CASH FLOWS FROM OPERATING ACTIVITIES</h4>
           <div class="row"><span>Cash Receipts from Customers</span><span>₱1,460,000</span></div>
           <div class="row"><span>Cash Payments to Suppliers and Employees</span><span>(₱1,090,000)</span></div>
@@ -123,6 +103,98 @@
         </div>
       </div>
     </div>
+
+    <!-- TRANSACTION JOURNALING SECTION -->
+    <div class="box-row">
+      <div class="box full">
+        <div class="title-row">
+          <h2>Transaction Journal</h2>
+          <p>Record and view journal entries</p>
+        </div>
+
+        <div class="card-body">
+          <!-- JOURNAL FORM -->
+          <form class="journal-form" onsubmit="addTransaction(event)">
+            <div class="form-row">
+              <input type="date" id="date" required>
+              <input type="text" id="account" placeholder="Account Name" required>
+              <input type="number" id="debit" placeholder="Debit (₱)" min="0">
+              <input type="number" id="credit" placeholder="Credit (₱)" min="0">
+              <input type="text" id="description" placeholder="Description">
+              <button type="submit">Add</button>
+            </div>
+          </form>
+
+          <!-- JOURNAL TABLE -->
+          <table class="journal-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Account</th>
+                <th>Debit (₱)</th>
+                <th>Credit (₱)</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody id="journal-body">
+              <tr>
+                <td>2025-09-01</td>
+                <td>Cash</td>
+                <td>50,000</td>
+                <td>-</td>
+                <td>Initial capital investment</td>
+              </tr>
+              <tr>
+                <td>2025-09-05</td>
+                <td>Inventory</td>
+                <td>20,000</td>
+                <td>-</td>
+                <td>Purchase of goods for resale</td>
+              </tr>
+              <tr>
+                <td>2025-09-10</td>
+                <td>Sales Revenue</td>
+                <td>-</td>
+                <td>35,000</td>
+                <td>Cash sales to customers</td>
+              </tr>
+              <tr>
+                <td>2025-09-15</td>
+                <td>Utilities Expense</td>
+                <td>2,000</td>
+                <td>-</td>
+                <td>Payment for electricity bill</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <script>
+    function addTransaction(event) {
+      event.preventDefault();
+      const date = document.getElementById('date').value;
+      const account = document.getElementById('account').value;
+      const debit = document.getElementById('debit').value || "-";
+      const credit = document.getElementById('credit').value || "-";
+      const description = document.getElementById('description').value;
+
+      const tbody = document.getElementById('journal-body');
+
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${date}</td>
+        <td>${account}</td>
+        <td>${debit}</td>
+        <td>${credit}</td>
+        <td>${description}</td>
+      `;
+      tbody.appendChild(row);
+
+      document.querySelector('.journal-form').reset();
+    }
+  </script>
 </body>
 </html>

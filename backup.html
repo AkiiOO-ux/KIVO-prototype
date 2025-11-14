@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Backup - Compliance and Safety</title>
+  <link rel="stylesheet" href="backup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>COMPLIANCE AND SAFETY</h1>
+      <div class="logo">kivo</div>
+    </header>
+
+    <!-- Back Button -->
+    <div class="back-btn-container">
+      <a href="compliance.html" class="back-btn">&lt; Back</a>
+    </div>
+
+    <section class="backup-section">
+      <div class="backup-header">
+        <h2>CLOUD BACKUP</h2>
+      </div>
+
+      <div class="backup-controls">
+        <!-- Backup Category Dropdown -->
+        <div class="control-group">
+          <label for="backup-category">Backup Category</label>
+          <select id="backup-category" name="backup-category">
+            <option value="schedule">Schedule</option>
+            <option value="inventory">Inventory</option>
+            <option value="employee">Employee</option>
+            <option value="sales">Sales</option>
+            <option value="customers">Customers</option>
+          </select>
+        </div>
+
+        <!-- Backup Schedule Dropdown -->
+        <div class="control-group">
+          <label for="backup-schedule">Backup Schedule</label>
+          <select id="backup-schedule" name="backup-schedule">
+            <option value="monthly">Monthly</option>
+            <option value="weekly">Weekly</option>
+            <option value="daily" selected>Daily</option>
+          </select>
+        </div>
+
+        <!-- Time Dropdown -->
+        <div class="control-group">
+          <label for="time">Time</label>
+          <select id="time" name="time">
+            <option value="12am" selected>12:00 AM</option>
+            <option value="1am">01:00 AM</option>
+            <option value="2am">02:00 AM</option>
+          </select>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-group">
+          <button class="run-backup-btn">Run Backup Now</button>
+          <button class="restore-data-btn">Restore Data</button>
+        </div>
+      </div>
+
+      <div class="backup-history">
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th>Date/Time (PHT)</th>
+              <th>Backup Type</th>
+              <th>Status</th>
+              <th>Size</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <!-- Default backup data here -->
+            <tr>
+              <td>2025-10-12 03:00:00</td>
+              <td>Scheduled</td>
+              <td>Success</td>
+              <td>5.4 GB</td>
+              <td>12 min 30 sec</td>
+            </tr>
+            <tr>
+              <td>2025-10-11 20:15:30</td>
+              <td>Manual</td>
+              <td>Failure</td>
+              <td>0 GB</td>
+              <td>1 min 05 sec</td>
+            </tr>
+            <tr>
+              <td>2025-10-11 03:00:00</td>
+              <td>Scheduled</td>
+              <td>Success</td>
+              <td>5.3 GB</td>
+              <td>11 min 45 sec</td>
+            </tr>
+            <tr>
+              <td>2025-10-10 03:00:00</td>
+              <td>Scheduled</td>
+              <td>Success</td>
+              <td>5.2 GB</td>
+              <td>12 min 05 sec</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+<script>
+  // Sample data for each category
+  const dataSets = {
+    schedule: [
+      ['2025-10-12 03:00:00', 'Scheduled', 'Success', '5.4 GB', '12 min 30 sec'],
+      ['2025-10-11 20:15:30', 'Manual', 'Failure', '0 GB', '1 min 05 sec'],
+      ['2025-10-11 03:00:00', 'Scheduled', 'Success', '5.3 GB', '11 min 45 sec'],
+      ['2025-10-10 03:00:00', 'Scheduled', 'Success', '5.2 GB', '12 min 05 sec'],
+    ],
+    inventory: [
+      ['2025-10-12 08:00:00', 'Update', 'Success', '150 MB', '5 min'],
+      ['2025-10-11 08:00:00', 'Update', 'Success', '200 MB', '6 min'],
+      ['2025-10-10 08:00:00', 'Update', 'Failure', '0 MB', '1 min'],
+    ],
+    employee: [
+      ['2025-10-12 09:00:00', 'Manual', 'Success', '1.2 MB', '2 min'],
+      ['2025-10-11 09:00:00', 'Scheduled', 'Success', '2.5 MB', '3 min'],
+      ['2025-10-10 09:00:00', 'Manual', 'Failure', '0 MB', '1 min'],
+    ],
+    sales: [
+      ['2025-10-12 10:00:00', 'Scheduled', 'Success', '3.7 MB', '7 min'],
+      ['2025-10-11 10:00:00', 'Scheduled', 'Success', '4.2 MB', '6 min'],
+      ['2025-10-10 10:00:00', 'Manual', 'Failure', '0 MB', '1 min'],
+    ],
+    customers: [
+      ['2025-10-12 11:00:00', 'Manual', 'Success', '2.3 MB', '4 min'],
+      ['2025-10-11 11:00:00', 'Scheduled', 'Success', '2.6 MB', '5 min'],
+      ['2025-10-10 11:00:00', 'Manual', 'Failure', '0 MB', '1 min'],
+    ],
+  };
+
+  const tableBody = document.getElementById('table-body');
+  const categorySelect = document.getElementById('backup-category');
+
+  categorySelect.addEventListener('change', () => {
+    const selected = categorySelect.value;
+    const rows = dataSets[selected] || [];
+    tableBody.innerHTML = ''; // Clear existing rows
+    rows.forEach(row => {
+      const tr = document.createElement('tr');
+      row.forEach(cell => {
+        const td = document.createElement('td');
+        td.textContent = cell;
+        tr.appendChild(td);
+      });
+      tableBody.appendChild(tr);
+    });
+  });
+
+  // New: Add alerts for the buttons
+  document.querySelector('.run-backup-btn').addEventListener('click', () => {
+    alert('Backup complete!');
+  });
+
+  document.querySelector('.restore-data-btn').addEventListener('click', () => {
+    alert('Restore complete!');
+  });
+</script>
+</body>
+</html>

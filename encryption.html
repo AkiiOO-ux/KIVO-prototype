@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Encryption - Kivo</title>
+    <link rel="stylesheet" href="encryption.css">
+</head>
+<body>
+    <header>
+        <h1>COMPLIANCE AND SAFETY</h1>
+        <button class="logout">Kivo</button>
+    </header>
+
+    <main>
+        <section class="encryption-container">
+            <button class="back-btn" onclick="goBack()">&#60; Back</button>
+            <h2>SECURE ENCRYPTION</h2>
+
+            <div class="status-box">
+                <div class="status-icon">✔</div>
+                <p><strong>Encryption Status:</strong> All Data Protected</p>
+            </div>
+
+            <div class="encryption-panels">
+                <div class="panel">
+                    <h3>ENCRYPTED DATA TYPES</h3>
+                    <div class="toggle-item">
+                        <span>Customer Information</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="toggle-item">
+                        <span>Transaction Database</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="toggle-item">
+                        <span>Employee Records</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="toggle-item">
+                        <span>Cloud Backups</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h3>ENCRYPTION KEY MANAGEMENT</h3>
+                    <div class="toggle-item">
+                        <span>Download Emergency Decryption Key</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <button class="save-btn" onclick="saveChanges()">Save Changes</button>
+        </section>
+    </main>
+
+    <script>
+        function goBack() {
+            window.location.href = "compliance.html";
+        }
+
+        function saveChanges() {
+            alert("Changes have been saved successfully!");
+        }
+    </script>
+</body>
+</html>

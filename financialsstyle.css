@@ -75,17 +75,15 @@ body {
   transform: scale(1.05);
 }
 
-
-
 /* ===== CONTENT ===== */
-.content, .content2 {
+.content {
   padding: 40px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-/* ===== BOXES ===== */
+/* ===== BOX ROWS ===== */
 .box-row {
   display: flex;
   justify-content: space-between;
@@ -159,12 +157,12 @@ body {
   margin: 15px 0;
 }
 
-/* TOP BOX (HEADERS IN LARGE BOXES) */
+/* TOP BOX */
 .top-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f3f3f3; 
+  background-color: #f3f3f3;
   padding: 10px 15px;
   border-bottom: 2px solid #ccc;
   border-radius: 6px 6px 0 0;
@@ -176,7 +174,7 @@ body {
   font-weight: 600;
 }
 
-/* TITLE ROW (FOR SMALL BOXES ABOVE LARGE ONES) */
+/* TITLE ROW */
 .title-row {
   display: flex;
   justify-content: space-between;
@@ -194,4 +192,100 @@ body {
   color: #666;
 }
 
+/* ===== RESPONSIVE FIX ===== */
+@media (max-width: 768px) {
+  .box-row {
+    flex-direction: column;
+  }
 
+  .box {
+    width: 100%;
+  }
+
+  .title-row {
+  text-align: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.top-box {
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  gap: 10px;
+}
+
+
+  .title-row h2, .top-box h2 {
+    font-size: 18px;
+  }
+}
+
+/* ===== JOURNALING SECTION ===== */
+.box.full {
+  width: 100%;
+}
+
+.journal-form {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form-row input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 120px;
+  font-size: 14px;
+}
+
+.form-row button {
+  background-color: #5CA2CD;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.form-row button:hover {
+  background-color: #4a8eb5;
+}
+
+.journal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.journal-table th,
+.journal-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.journal-table th {
+  background-color: #f3f3f3;
+  color: #2b4c7e;
+}
+
+.placeholder {
+  text-align: center;
+  color: #888;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,249 @@
+:root {
+  --main-blue: #5CA2CD;
+  --blue-light: #80C3E5;
+  --white: #ffffff;
+  --text-dark: #083047;
+  --shadow: 0 8px 18px rgba(15, 30, 40, 0.12);
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f4f9fc;
+  color: var(--text-dark);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  background: var(--main-blue);
+  color: white;
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow);
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 22px;
+  color: white;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  font-weight: 800;
+  color: white;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+  background: var(--white);
+  color: var(--main-blue);
+  border: 2px solid var(--white);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  background-color: var(--main-blue);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 20px 0 10px 40px;
+  box-shadow: var(--shadow);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: var(--blue-light);
+  transform: translateY(-2px);
+}
+
+/* CONTENT */
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+}
+
+.about-section h2 {
+  color: var(--main-blue);
+  margin-bottom: 12px;
+  font-size: 20px;
+  border-bottom: 2px solid rgba(92, 162, 205, 0.3);
+  padding-bottom: 6px;
+}
+
+/* FAQ SECTION */
+.faq-section {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+}
+
+.faq-item {
+  margin-bottom: 18px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(92, 162, 205, 0.1);
+}
+
+.faq-item h3 {
+  color: var(--main-blue);
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+/* CHAT BOX */
+.chat-section {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start; /* align left with other sections */
+}
+
+.chat-box {
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  width: 100%; /* full width of parent container */
+  max-width: 600px; /* optionally slightly wider */
+}
+
+
+.chat-header {
+  background: linear-gradient(135deg, var(--main-blue), var(--blue-light));
+  color: white;
+  padding: 12px 16px;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.chat-body {
+  padding: 15px;
+  height: 160px;
+  overflow-y: auto;
+  font-size: 0.95rem;
+}
+
+/* Chat message bubbles */
+.chat-body p {
+  background: rgba(92, 162, 205, 0.1);
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+
+/* CHAT INPUT */
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  background-color: #f7fbfe;
+}
+
+.chat-input button {
+  background: var(--main-blue);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chat-input button:hover {
+  background: var(--blue-light);
+}
+
+/* FOOTER */
+footer {
+  background: var(--main-blue);
+  color: white;
+  text-align: center;
+  padding: 18px;
+  font-size: 14px;
+  border-radius: 16px 16px 0 0;
+  box-shadow: var(--shadow);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .back-btn {
+    margin-left: 10px;
+  }
+
+  .chat-box {
+    width: 100%;
+  }
+
+  .about-section,
+  .faq-section {
+    padding: 20px;
+  }
+}

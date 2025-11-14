@@ -8,7 +8,7 @@
 
 body {
   font-family: "Segoe UI", sans-serif;
-  background-color: var(--yellow);
+  background-color: var(--white);
   color: var(--dark);
   margin: 0;
 }
@@ -57,17 +57,17 @@ header h1 {
   color: var(--white);
 }
 
-/* BACK BUTTON */
+/* BACK BUTTON - updated placement */
 .back-btn {
-  background-color: white;
+  background-color: var(--blue);
   border: none;
-  color: var(--blue);
+  color: white;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   padding: 8px 16px;
   border-radius: 8px;
-  margin: 25px 0 0 60px;
+  margin: 15px 40px; /* closer to header */
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -75,7 +75,6 @@ header h1 {
   background-color: var(--blue);
   color: white;
 }
-
 
 /* LAYOUT */
 .container {
@@ -85,19 +84,28 @@ header h1 {
 .grid {
   display: grid;
   grid-template-columns: 1.3fr 1fr 1fr;
+  grid-template-areas:
+    "staff perms history"
+    "staff sales history";
   gap: 25px;
 }
 
+/* Assign grid areas */
+.staff-accounts { grid-area: staff; }
+.role-permissions { grid-area: perms; }
+.sales-table { grid-area: sales; }
+.employee-history { grid-area: history; }
+
 /* CARD */
 .card {
-  background-color: var(--white);
+  background-color: var(--blue);
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .card h2 {
-  color: var(--blue);
+  color: var(--white);
   font-size: 18px;
   margin-bottom: 15px;
 }
@@ -108,22 +116,21 @@ header h1 {
 }
 
 .staff-list .staff {
-  background-color: var(--blue);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--blue);
   border-radius: 10px;
   display: flex;
   align-items: center;
   gap: 15px;
   padding: 10px 12px;
   margin-bottom: 10px;
-  flex-wrap: wrap;
 }
 
 .avatar {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--blue);
 }
 
 /* ROLE PERMISSIONS */
@@ -132,7 +139,6 @@ header h1 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
-  flex-wrap: wrap;
 }
 
 .toggle {
@@ -152,73 +158,42 @@ header h1 {
   height: 21px;
   left: 2px;
   top: 2px;
-  background-color: var(--white);
+  background-color: var(--blue);
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
 
 .toggle.active {
-  background-color: var(--blue);
+  background-color: var(--white);
 }
 
 .toggle.active::before {
   transform: translateX(20px);
 }
 
-
-/* COMMISSION */
-.commission-entry {
-  display: grid;
-  grid-template-columns: 50px 1fr auto auto;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.rate {
-  font-weight: bold;
-  color: var(--blue);
-  text-align: right;
-}
-
-.amount {
-  text-align: right;
-  font-weight: bold;
-}
-
-/* SALES TRACKING SECTION */
-.sales-section {
-  grid-column: span 2;
-}
-
-.sales-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  align-items: center;
-  gap: 20px;
-}
-
-.sales-table table {
+/* SALES TABLE */
+.sales-table table,
+.employee-history table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 14px;
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.sales-table th {
+.sales-table th,
+.employee-history th {
   background-color: var(--light-blue);
   color: var(--blue);
   text-align: left;
   padding: 8px;
 }
 
-.sales-table td {
-  padding: 6px;
-}
-
-/* CHART */
-#salesChart {
-  width: 100%;
-  height: 200px;
+.sales-table td,
+.employee-history td {
+  padding: 6px 10px;
+  font-size: 14px;
+  color: var(--dark);
 }
 
 /* ADD BUTTON */
@@ -239,108 +214,6 @@ header h1 {
   background: #4a8eb5;
 }
 
-/* ---------------- RESPONSIVE DESIGN ---------------- */
-
-/* Tablets */
-@media (max-width: 992px) {
-  header {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 20px;
-    min-margin:auto;
-    text-align: left;
-  }
-  header h1 {
-    font-size: 20px;
-    margin: 0;
-  }
-
-  .right-header {
-    margin-left: auto;        /* keeps logo/logout on right */
-  }
-
-  .container {
-    padding: 20px 30px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .sales-grid {
-    grid-template-columns: 1fr;
-  }
-
-  #salesChart {
-    height: 250px;
-  }
-
-  .staff-list .staff {
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-}
-
-/* Mobile Phones */
-@media (max-width: 600px) {
-  .back-btn {
-    margin-left: 25px;
-    font-size: 14px;
-  }
-
-  .container {
-    padding: 15px 20px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .sales-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .sales-table table,
-  .sales-table th,
-  .sales-table td {
-    font-size: 12px;
-  }
-
-  header h1 {
-    font-size: 18px;
-  }
-
-  .logo {
-    font-size: 24px;
-  }
-
-  .logout-btn {
-    padding: 6px 12px;
-    font-size: 13px;
-  }
-
-  .staff-list .staff {
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 13px;
-  }
-
-  .avatar {
-    width: 40px;
-    height: 40px;
-  }
-
-  .add-btn {
-    width: 100%;
-    max-width: 280px;
-  }
-
-  #salesChart {
-    height: 220px;
-  }
-}
 /* MODAL POPUP */
 .modal {
   display: none;
@@ -361,14 +234,20 @@ header h1 {
   border-radius: 12px;
   width: 90%;
   max-width: 420px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
   position: relative;
   animation: popIn 0.3s ease;
 }
 
 @keyframes popIn {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .modal-content h2 {
@@ -423,4 +302,69 @@ header h1 {
   color: green;
   font-weight: 600;
   text-align: center;
+}
+
+/* RESPONSIVE STYLES */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "staff perms"
+      "sales history";
+  }
+
+  .staff-accounts { grid-row: span 1; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  /* make tables scrollable horizontally */
+  .sales-table table,
+  .employee-history table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* back button margin for mobile */
+  .back-btn {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  /* optional: scale avatars slightly */
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* reduce toggle size slightly */
+  .toggle {
+    width: 40px;
+    height: 22px;
+  }
+
+  .toggle::before {
+    width: 19px;
+    height: 19px;
+  }
+
+  .toggle.active::before {
+    transform: translateX(18px);
+  }
 }
