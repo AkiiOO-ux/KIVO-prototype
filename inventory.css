@@ -565,3 +565,20 @@ body {
   font-weight: 600;
   text-align: center;
 }
+/* Horizontal row for bottom cards */
+.supplier-card,
+.delivery-card {
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+  margin-top: 20px;
+}
+
+/* Stack on mobile */
+@media (max-width: 900px) {
+  .supplier-card,
+  .delivery-card {
+    width: 100%;
+    display: block;
+  }
+}
