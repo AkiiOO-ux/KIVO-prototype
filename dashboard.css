@@ -51,6 +51,7 @@ body {
 }
 
 .center .title {
+    margin-left: 10px;
     color: white;
     font-size: 22px;
     font-weight: 600;
