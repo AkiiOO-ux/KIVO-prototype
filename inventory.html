@@ -127,30 +127,58 @@
         </section>
       </div>
 
-      <!-- BOTTOM ROW -->
-      <section class="card supplier-card">
-        <h3>PRODUCT MANAGEMENT</h3>
-        <table class="supplier-table">
-          <thead>
-            <tr>
-              <th>Supplier</th><th>Brand / Product</th><th>Contact</th><th>Next Delivery</th><th>Balance (₱)</th><th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Monde Nissin</td><td>Lucky Me!, SkyFlakes</td><td>Carla • 0917 235 8890</td><td>Oct 17, 2025</td><td>15,000</td><td><span class="pill">Active</span></td></tr>
-            <tr><td>URC</td><td>Piattos, C2</td><td>Jason • 0998 441 7722</td><td>Oct 17, 2025</td><td>0</td><td><span class="pill">Active</span></td></tr>
-          </tbody>
-        </table>
-      </section>
+      <!-- BOTTOM ROW (FIXED GRID) -->
+      <div class="bottom-row">
 
-      <section class="card delivery-card">
-        <h3>DELIVERY UPDATES</h3>
-        <ul class="updates">
-          <li><strong>Oct 16, 2025 • 6:06 PM</strong> — CDO Foodsphere — Ulam Burger (25 packs)</li>
-          <li><strong>Oct 16, 2025 • 6:00 PM</strong> — Unilever — Surf Powder (20 boxes)</li>
-          <li><strong>Oct 16, 2025 • 5:30 PM</strong> — Nestlé — Milo Sachets (30 boxes)</li>
-        </ul>
-      </section>
+        <!-- PRODUCT MANAGEMENT -->
+        <section class="card supplier-card">
+          <h3>PRODUCT MANAGEMENT</h3>
+          <table class="supplier-table">
+            <thead>
+              <tr>
+                <th>Supplier</th>
+                <th>Brand / Product</th>
+                <th>Contact</th>
+                <th>Next Delivery</th>
+                <th>Balance (₱)</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Supplier">Monde Nissin</td>
+                <td data-label="Brand / Product">Lucky Me!, SkyFlakes</td>
+                <td data-label="Contact">Carla • 0917 235 8890</td>
+                <td data-label="Next Delivery">Oct 17, 2025</td>
+                <td data-label="Balance (₱)">15,000</td>
+                <td data-label="Status"><span class="pill">Active</span></td>
+              </tr>
+              <tr>
+                <td data-label="Supplier">URC</td>
+                <td data-label="Brand / Product">Piattos, C2</td>
+                <td data-label="Contact">Jason • 0998 441 7722</td>
+                <td data-label="Next Delivery">Oct 17, 2025</td>
+                <td data-label="Balance (₱)">0</td>
+                <td data-label="Status"><span class="pill">Active</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+
+        <!-- DELIVERY UPDATES -->
+        <section class="card delivery-card">
+          <h3>DELIVERY UPDATES</h3>
+
+          <ul class="updates">
+            <li><strong>Oct 16, 2025 • 6:06 PM</strong> — CDO Foodsphere — Ulam Burger (25 packs)</li>
+            <li><strong>Oct 16, 2025 • 6:00 PM</strong> — Unilever — Surf Powder (20 boxes)</li>
+            <li><strong>Oct 16, 2025 • 5:30 PM</strong> — Nestlé — Milo Sachets (30 boxes)</li>
+          </ul>
+        </section>
+
+      </div>
+
     </main>
   </div>
   <script> 
