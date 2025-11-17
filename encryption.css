@@ -1,12 +1,12 @@
 body {
     font-family: "Segoe UI", sans-serif;
-    background-color: #61a3c9;
+    background-color: white;
     margin: 0;
     color: #1e4d68;
 }
 
 header {
-    background-color: #2d6b8e;
+    background-color: #11224E;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -37,7 +37,7 @@ header h1 {
 }
 
 .back-btn {
-    background-color: #2d6b8e;
+    background-color: #11224E;
     color: white;
     border: none;
     padding: 8px 15px;
@@ -51,12 +51,14 @@ h2 {
     font-weight: 600;
     margin: 15px 0 20px 0;
     text-align: center;
+    color: #11224E;
 }
 
 .status-box {
     display: flex;
     align-items: center;
-    background-color: #dfeef5;
+    background-color: #11224E;
+    color: white;
     border-radius: 8px;
     padding: 20px;
     font-size: 1.2em;
@@ -66,7 +68,7 @@ h2 {
 
 .status-icon {
     font-size: 2em;
-    color: #2d6b8e;
+    color: white;
     margin-right: 15px;
 }
 
@@ -78,9 +80,10 @@ h2 {
 }
 
 .panel {
-    background-color: #dfeef5;
+    background-color: #11224E;
     border-radius: 8px;
     padding: 20px;
+    color: white;
     width: 48%;
     box-sizing: border-box;
 }
@@ -88,7 +91,7 @@ h2 {
 .panel h3 {
     font-size: 1em;
     margin-bottom: 15px;
-    color: #2d6b8e;
+    color: white;
     text-align: center;
 }
 
@@ -117,7 +120,7 @@ h2 {
     position: absolute;
     cursor: pointer;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: #ccc;
+    background-color: #473472;
     transition: 0.3s;
     border-radius: 34px;
 }
@@ -129,13 +132,13 @@ h2 {
     width: 18px;
     left: 3px;
     bottom: 3px;
-    background-color: white;
+    background-color: #11224E;
     transition: 0.3s;
     border-radius: 50%;
 }
 
 input:checked + .slider {
-    background-color: #f6d86b;
+    background-color: white;
 }
 
 input:checked + .slider:before {
@@ -145,7 +148,7 @@ input:checked + .slider:before {
 .save-btn {
     display: block;
     margin: 30px auto;
-    background-color: #2d6b8e;
+    background-color: #11224E;
     color: white;
     border: none;
     padding: 12px 25px;

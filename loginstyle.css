@@ -9,7 +9,7 @@ body {
 }
 
 .login-box {
-    background-color: #5CA2CD;
+    background-color: #11224E;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -30,12 +30,12 @@ body {
 }
 
 .dashboard-bar .left-text {
-    color: #33A1E0;
+    color: #11224E;
     text-transform: uppercase;
 }
 
 .dashboard-bar .right-text {
-    color: #33A1E0;
+    color: #11224E;
     text-transform: uppercase;
 }
 
@@ -96,7 +96,7 @@ button {
 
 button {
     background-color: white;
-    color: #33A1E0;
+    color: #11224E;
     border: none;
     padding: 10px 20px;
     border-radius: 10px;

@@ -8,7 +8,7 @@
 
 /* BODY */
 body {
-  background-color: #5CA2CD;
+  background-color: white;
   color: #333;
 }
 
@@ -17,13 +17,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: #11224E;
   padding: 20px 40px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar h1 {
-  color: #5CA2CD;
+  color: white;
   font-size: 24px;
   font-weight: 600;
   white-space: nowrap;
@@ -37,8 +37,8 @@ body {
 }
 
 .logout-btn {
-  background-color: #5CA2CD;
-  color: white;
+  background-color: white;
+  color: #11224E;
   border: none;
   padding: 8px 18px;
   border-radius: 8px;
@@ -49,15 +49,15 @@ body {
 }
 
 .logout-btn:hover {
-  background-color: #4a8eb5;
+  background-color: white;
   transform: translateY(-2px);
 }
 
 /* ===== BACK BUTTON ===== */
 .back-btn {
-  background-color: white;
-  border: 2px solid white;
-  color: #5CA2CD;
+  background-color: #11224E;
+  border: 2px solid #11224E;
+  color: white;
   font-size: 16px;
   cursor: pointer;
   text-align: center;
@@ -70,7 +70,7 @@ body {
 }
 
 .back-btn:hover {
-  background-color: #5CA2CD;
+  background-color: #11224E;
   color: white;
   transform: scale(1.05);
 }
@@ -92,7 +92,8 @@ body {
 }
 
 .box {
-  background-color: white;
+  background-color: #11224E;
+  color: white;
   border-radius: 15px;
   padding: 25px;
   flex: 1;
@@ -109,7 +110,7 @@ body {
 /* HEADERS */
 .box h2 {
   font-size: 22px;
-  color: #2b4c7e;
+  color: #11224E;
   margin-bottom: 5px;
 }
 
@@ -126,14 +127,14 @@ body {
 
 .card-body h3 {
   font-size: 18px;
-  color: #2b4c7e;
+  color: white;
   margin-top: 10px;
   margin-bottom: 15px;
 }
 
 .card-body h4 {
   font-size: 16px;
-  color: #3d5a80;
+  color: white;
   margin: 15px 0 10px;
 }
 
@@ -148,7 +149,7 @@ body {
 
 .row.bold {
   font-weight: 600;
-  color: #2b4c7e;
+  color: white;
 }
 
 /* DIVIDER */
@@ -184,12 +185,12 @@ body {
 
 .title-row h2 {
   font-size: 20px;
-  color: #2b4c7e;
+  color: white;
 }
 
 .title-row p {
   font-size: 14px;
-  color: #666;
+  color: white;
 }
 
 /* ===== RESPONSIVE FIX ===== */
@@ -246,8 +247,8 @@ body {
 }
 
 .form-row button {
-  background-color: #5CA2CD;
-  color: white;
+  background-color: white;
+  color: #11224E;
   border: none;
   padding: 8px 18px;
   border-radius: 6px;
@@ -257,7 +258,7 @@ body {
 }
 
 .form-row button:hover {
-  background-color: #4a8eb5;
+  background-color: white;
 }
 
 .journal-table {
@@ -274,8 +275,8 @@ body {
 }
 
 .journal-table th {
-  background-color: #f3f3f3;
-  color: #2b4c7e;
+  background-color: white;
+  color: #11224E;
 }
 
 .placeholder {

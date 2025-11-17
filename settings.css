@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #5CA2CD;
+  background: white;
   color: #00496B;
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@ body {
 .settings-container {
   width: 100%;
   max-width: 1100px;
-  background: #5CA2CD;
+  background: white;
   border-radius: 15px;
   text-align: center;
 }
@@ -30,8 +30,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background: #5CA2CD;
-  color: white;
+  background: white;
+  color: #11224E;
   padding: 25px 25px 10px;
   font-weight: 600;
 }
@@ -54,8 +54,8 @@ body {
 /* Back button BELOW title */
 .back-btn {
   display: inline-block;
-  background: white;
-  color: #5CA2CD;
+  background: #11224E;
+  color: white;
   border: none;
   padding: 7px 16px;
   border-radius: 6px;
@@ -66,7 +66,7 @@ body {
 }
 
 .back-btn:hover {
-  background: #e8f3fa;
+  background: #11224E;
 }
 
 /* Grid Layout */
@@ -78,7 +78,7 @@ body {
 }
 
 .settings-card {
-  background: #E3F1FA;
+  background: #11224E;
   border-radius: 12px;
   padding: 25px;
   text-align: left;
@@ -95,7 +95,7 @@ body {
 
 .icon {
   font-size: 2.5rem;
-  color: #5CA2CD;
+  color: white;
   margin-right: 15px;
 }
 
@@ -104,7 +104,7 @@ body {
 }
 
 .text h2 {
-  color: #00496B;
+  color: white;
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 8px;
@@ -112,7 +112,7 @@ body {
 
 .text p {
   font-size: 0.85rem;
-  color: #3C6E8B;
+  color: white;
 }
 
 /* Toggle switch */

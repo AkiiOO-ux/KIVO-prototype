@@ -23,7 +23,7 @@ body {
 /* HEADER */
 header {
   width: 100%;
-  background: var(--main-blue);
+  background: #11224E;
   color: white;
   padding: 18px 32px;
   display: flex;
@@ -57,7 +57,7 @@ header h1 {
 /* LOGOUT BUTTON */
 .logout-btn {
   background: var(--white);
-  color: var(--main-blue);
+  color: #11224E;
   border: 2px solid var(--white);
   padding: 8px 16px;
   border-radius: 8px;
@@ -75,7 +75,7 @@ header h1 {
 
 /* BACK BUTTON */
 .back-btn {
-  background-color: var(--main-blue);
+  background-color: #11224E;
   color: white;
   border: none;
   padding: 10px 18px;
@@ -89,7 +89,7 @@ header h1 {
 }
 
 .back-btn:hover {
-  background-color: var(--blue-light);
+  background-color: #11224E;
   transform: translateY(-2px);
 }
 
@@ -110,7 +110,7 @@ header h1 {
 }
 
 .about-section h2 {
-  color: var(--main-blue);
+  color: #11224E;
   margin-bottom: 12px;
   font-size: 20px;
   border-bottom: 2px solid rgba(92, 162, 205, 0.3);
@@ -133,7 +133,7 @@ header h1 {
 }
 
 .faq-item h3 {
-  color: var(--main-blue);
+  color: #11224E;
   font-size: 17px;
   margin-bottom: 6px;
 }
@@ -149,6 +149,7 @@ header h1 {
   background: var(--white);
   border-radius: 16px;
   box-shadow: var(--shadow);
+  margin-left: 50px;
   overflow: hidden;
   width: 100%; /* full width of parent container */
   max-width: 600px; /* optionally slightly wider */
@@ -156,7 +157,7 @@ header h1 {
 
 
 .chat-header {
-  background: linear-gradient(135deg, var(--main-blue), var(--blue-light));
+  background: linear-gradient(135deg, #11224E, #11224E);
   color: white;
   padding: 12px 16px;
   font-weight: bold;
@@ -195,7 +196,7 @@ header h1 {
 }
 
 .chat-input button {
-  background: var(--main-blue);
+  background: #11224E;
   color: white;
   border: none;
   padding: 10px 16px;
@@ -204,12 +205,12 @@ header h1 {
 }
 
 .chat-input button:hover {
-  background: var(--blue-light);
+  background: #11224E;
 }
 
 /* FOOTER */
 footer {
-  background: var(--main-blue);
+  background: #11224E;
   color: white;
   text-align: center;
   padding: 18px;

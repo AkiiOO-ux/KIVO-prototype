@@ -22,12 +22,12 @@ body {
 
 /* BACK BUTTON */
 .back {
-  background-color: var(--blue-bg);
+  background-color: white;
 }
 
 .back-btn {
-  background-color: #ffffff;
-  color: #5CA2CD;
+  background-color: #11224E;
+  color: white;
   border: none;
   border-radius: 8px;
   font-size: 15px;
@@ -39,7 +39,7 @@ body {
 }
 
 .back-btn:hover {
-  background-color: #e0f0f8; /* light blue hover */
+  background-color: #11224E; /* light blue hover */
   text-decoration: none;
 }
 
@@ -49,7 +49,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #eaf4fa;
+  background-color: #11224E;
   padding: 20px 40px;
   position: relative;
   z-index: 10;
@@ -61,7 +61,7 @@ header h1 {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: var(--blue-text);
+  color: white;
 }
 
 /* RIGHT HEADER (Kivo + Logout) */
@@ -75,14 +75,14 @@ header h1 {
 header .logo {
   font-size: 24px;
   font-weight: 700;
-  color: var(--blue-text);
+  color: white;
 }
 
 /* LOGOUT BUTTON */
 .logout-btn {
-  background: var(--white);
-  color: var(--blue-text);
-  border: 2px solid var(--blue-text);
+  background: white;
+  color: #11224E;
+  border: 2px solid #11224E;
   padding: 8px 16px;
   border-radius: 8px;
   font-weight: 600;
@@ -91,13 +91,13 @@ header .logo {
 }
 
 .logout-btn:hover {
-  background: var(--blue-text);
-  color: var(--white);
+  background: white;
+  color: #11224E;
 }
 
 /* MAIN */
 main {
-  background-color: var(--blue-bg);
+  background-color: white;
   flex: 1;
   padding: 40px 60px;
   display: flex;
@@ -116,7 +116,7 @@ main {
 
 /* CARD DESIGN */
 .card {
-  background-color: var(--white);
+  background-color: #11224E;
   border-radius: 10px;
   display: flex;
   align-items: flex-start;
@@ -149,13 +149,13 @@ main {
 .card h2 {
   font-size: 18px;
   font-weight: 700;
-  color: var(--blue-text);
+  color: white;
   margin-bottom: 8px;
 }
 
 .card p {
   font-size: 14px;
-  color: #3c6a96;
+  color: white;
   line-height: 1.4;
 }
 

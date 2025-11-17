@@ -1,6 +1,6 @@
 :root {
   --header-yellow: #f7e58a;
-  --bg: #e9f0f6;
+  --bg: white;
   --card-blue: #2f86a6;
   --accent: #ffd24a;
   --white: #ffffff;
@@ -22,7 +22,7 @@ body {
 /* ===== HEADER ===== */
 header {
   width: 100%;
-  background: var(--header-yellow);
+  background: #11224E;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +35,7 @@ header {
 }
 
 .nav-left h1 {
-  color: #1b5666;
+  color: white;
   font-weight: 700;
   letter-spacing: 2px;
   font-size: 20px;
@@ -50,12 +50,12 @@ header {
 .logo {
   font-weight: 800;
   font-size: 24px;
-  color: #1b5666;
+  color: white;
 }
 
 .logout-btn {
-  background: #1f6b86;
-  color: #ffffff;
+  background: white;
+  color: #11224E;
   border: none;
   padding: 10px 18px;
   border-radius: 8px;
@@ -73,9 +73,9 @@ header {
 
 /* ===== BACK BUTTON ===== */
 .back-btn {
-  background-color: white;
-  border: 2px solid #5CA2CD;
-  color: #5CA2CD;
+  background-color: #11224E;
+  border: 2px solid #11224E;
+  color: white;
   font-size: 16px;
   cursor: pointer;
   margin: 25px 0 0 20px;
@@ -86,7 +86,7 @@ header {
 }
 
 .back-btn:hover {
-  background-color: #5CA2CD;
+  background-color: #11224E;
   color: white;
   transform: scale(1.05);
 }
@@ -111,7 +111,7 @@ header {
 }
 
 .loyalty-card, .purchase-card, .promos-card {
-  background: var(--card-blue);
+  background: #11224E;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
@@ -128,7 +128,7 @@ header {
 .add-btn {
   background: var(--white);
   border: none;
-  color: #1b5666;
+  color: #11224E;
   padding: 8px 14px;
   border-radius: 8px;
   font-weight: 600;

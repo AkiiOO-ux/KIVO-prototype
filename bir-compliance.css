@@ -17,9 +17,9 @@ body {
 
 /* Back Button */
 .back-btn {
-  background-color: #fff;
-  color: #2b7aa9;
-  border: 1px solid #2b7aa9;
+  background-color: #11224E;
+  color: white;
+  border: 1px solid #11224E;
   padding: 8px 16px;
   font-weight: bold;
   border-radius: 6px;
@@ -28,7 +28,7 @@ body {
 }
 
 .back-btn:hover {
-  background-color: #d9ecfa;
+  background-color: #11224E;
   transform: scale(1.05);
 }
 
@@ -36,7 +36,7 @@ body {
 .container {
   max-width: 1100px;
   margin: 40px auto;
-  background-color: #fff;
+  background-color: #11224E;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   padding: 20px;
@@ -50,21 +50,21 @@ header {
 
 header h1 {
   font-size: 32px;
-  color: #1d6f97;
+  color: white;
   font-weight: 600;
 }
 
 /* BIR Compliance Section */
 .bir-compliance h2 {
   font-size: 24px;
-  color: #3f83b4;
+  color: white;
   margin-bottom: 20px;
   font-weight: 500;
 }
 
 /* Status Box */
 .status-box {
-  background-color: #fff2b8;
+  background-color: white;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 25px;
@@ -80,13 +80,13 @@ header h1 {
 }
 
 .status-check {
-  color: #3f83b4;
+  color: #11224E;
   font-size: 24px;
   margin-right: 10px;
 }
 
 .status-text {
-  color: #3f83b4;
+  color: #11224E;
   font-weight: 500;
 }
 
@@ -103,7 +103,7 @@ header h1 {
   align-items: center;
   gap: 10px;
   font-size: 16px;
-  color: #3f83b4;
+  color: white;
 }
 
 .invoice-toggle input[type="checkbox"] {
@@ -128,7 +128,7 @@ header h1 {
   left: 2px;
   width: 20px;
   height: 20px;
-  background: #fff;
+  background: #11224E;
   border-radius: 50%;
   transition: 0.3s;
 }
@@ -148,7 +148,7 @@ header h1 {
 
 .form-group label {
   font-size: 14px;
-  color: #3f83b4;
+  color: white;
   font-weight: 500;
 }
 
@@ -158,15 +158,15 @@ header h1 {
   border-radius: 10px;
   border: none;
   background-color: #fff2b8;
-  color: #3f83b4;
+  color: #11224E;
   cursor: pointer;
   appearance: none;
 }
 
 /* Generate Button */
 .generate-button {
-  background-color: #fff2b8;
-  color: #3f83b4;
+  background-color: white;
+  color: #11224E;
   padding: 12px 25px;
   font-size: 16px;
   border: none;
@@ -177,16 +177,17 @@ header h1 {
 }
 
 .generate-button:hover {
-  background-color: #ffe680;
+  background-color: #473472;
+  color: white;
 }
 
 /* BIR Reports Section */
 .bir-reports {
   margin-top: 30px;
-  background-color: #3f83b4;
+  background-color: white;
   padding: 20px;
   border-radius: 10px;
-  color: #fff;
+  color: #11224E;
   overflow-x: auto;
 }
 
@@ -199,7 +200,7 @@ header h1 {
 .report {
   display: flex;
   justify-content: space-between;
-  background-color: #5ea7cf;
+  background-color: #11224E;
   padding: 15px 20px;
   border-radius: 10px;
   flex-wrap: wrap;

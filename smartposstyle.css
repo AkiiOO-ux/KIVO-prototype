@@ -13,7 +13,7 @@ body {
 /* NAVBAR */
 .navbar {
     width: 100%;
-    background: #5CA2CD;
+    background: #11224E;
     color: white;
     padding: 18px 30px;
     display: flex;
@@ -28,7 +28,7 @@ body {
 /* Logout Button */
 .logout-btn {
   background-color: white;
-  color: #5CA2CD;
+  color: #11224E;
   border: none;
   padding: 8px 18px;
   border-radius: 8px;
@@ -39,14 +39,14 @@ body {
 }
 
 .logout-btn:hover {
-  background-color: #4a8eb5;
+  background-color: white;
   transform: translateY(-2px);
 }
 
 /* Back Button */
 .back-btn {
-  background-color: #5CA2CD;
-  border: 2px solid #5CA2CD;
+  background-color: #11224E;
+  border: 2px solid #11224E;
   color: white;
   font-size: 16px;
   font-weight: 600;
@@ -57,7 +57,7 @@ body {
 }
 
 .back-btn:hover {
-  background-color: #5CA2CD;
+  background-color: #11224E;
   color: white;
   text-decoration: none;
   transform: scale(1.05);
@@ -67,7 +67,7 @@ body {
     font-size: 22px;
     cursor: pointer;
     background: white;
-    color: #5CA2CD;
+    color: #11224E;
     padding: 6px 14px;
     border-radius: 10px;
     font-weight: 600;
@@ -75,8 +75,8 @@ body {
 }
 
 .cart-btn:hover {
-    background: #4a8eb5;
-    color: white;
+    background: whtie;
+    color: #11224E;
 }
 
 /* SEARCH BAR */
@@ -88,7 +88,7 @@ body {
 .search-bar input {
     width: 80%;
     padding: 14px;
-    border: 2px solid #5CA2CD;
+    border: 2px solid #11224E;
     border-radius: 10px;
     font-size: 16px;
     outline: none;
@@ -106,15 +106,15 @@ body {
     padding: 8px 18px;
     background: #EAF6FF;
     border-radius: 20px;
-    border: 2px solid #5CA2CD;
-    color: #5CA2CD;
+    border: 2px solid #11224E;
+    color: #11224E;
     cursor: pointer;
     font-weight: 600;
     white-space: nowrap;
 }
 
 .category.active {
-    background: #5CA2CD;
+    background: #11224E;
     color: white;
 }
 
@@ -128,7 +128,7 @@ body {
 
 .product-card {
     background: white;
-    border: 2px solid #5CA2CD;
+    border: 2px solid #11224E;
     border-radius: 10px;
     padding: 12px;
     text-align: center;
@@ -142,7 +142,7 @@ body {
 }
 
 .product-card .price {
-    background: #5CA2CD;
+    background: #11224E;
     color: white;
     padding: 4px;
     border-radius: 8px;

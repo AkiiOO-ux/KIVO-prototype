@@ -15,7 +15,7 @@ body {
 
 /* HEADER */
 header {
-  background-color: var(--blue);
+  background-color: #11224E;
   color: var(--white);
   display: flex;
   justify-content: space-between;
@@ -42,7 +42,7 @@ header h1 {
 
 .logout-btn {
   background: var(--white);
-  color: var(--blue);
+  color: #11224E;
   border: none;
   padding: 8px 16px;
   border-radius: 8px;
@@ -59,7 +59,7 @@ header h1 {
 
 /* BACK BUTTON - updated placement */
 .back-btn {
-  background-color: var(--blue);
+  background-color: #11224E;
   border: none;
   color: white;
   font-size: 16px;
@@ -72,7 +72,7 @@ header h1 {
 }
 
 .back-btn:hover {
-  background-color: var(--blue);
+  background-color: #11224E;
   color: white;
 }
 
@@ -98,7 +98,7 @@ header h1 {
 
 /* CARD */
 .card {
-  background-color: var(--blue);
+  background-color: #11224E;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -117,7 +117,7 @@ header h1 {
 
 .staff-list .staff {
   background-color: var(--white);
-  color: var(--blue);
+  color: #11224E;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -130,12 +130,13 @@ header h1 {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background-color: var(--blue);
+  background-color: #11224E;
 }
 
 /* ROLE PERMISSIONS */
 .permissions .perm-item {
   display: flex;
+  color: white;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
@@ -158,7 +159,7 @@ header h1 {
   height: 21px;
   left: 2px;
   top: 2px;
-  background-color: var(--blue);
+  background-color: #11224E;
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
@@ -184,7 +185,7 @@ header h1 {
 .sales-table th,
 .employee-history th {
   background-color: var(--light-blue);
-  color: var(--blue);
+  color: #11224E;
   text-align: left;
   padding: 8px;
 }
@@ -193,14 +194,14 @@ header h1 {
 .employee-history td {
   padding: 6px 10px;
   font-size: 14px;
-  color: var(--dark);
+  color: #11224E;
 }
 
 /* ADD BUTTON */
 .add-btn {
   display: block;
   margin: 30px auto 0;
-  background-color: var(--blue);
+  background-color: #11224E;
   color: var(--white);
   border: none;
   border-radius: 8px;
@@ -211,7 +212,7 @@ header h1 {
 }
 
 .add-btn:hover {
-  background: #4a8eb5;
+  background: #11224E;
 }
 
 /* MODAL POPUP */
@@ -251,7 +252,7 @@ header h1 {
 }
 
 .modal-content h2 {
-  color: var(--blue);
+  color: #11224E;
   margin-bottom: 15px;
 }
 
@@ -272,7 +273,7 @@ header h1 {
 }
 
 .submit-btn {
-  background-color: var(--blue);
+  background-color: #11224E;
   color: var(--white);
   border: none;
   border-radius: 8px;

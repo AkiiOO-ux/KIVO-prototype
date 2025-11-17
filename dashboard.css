@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #5CA2CD;
+    background-color: #11224E;
     padding: 20px 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -127,7 +127,7 @@ body {
     left: -250px;
     width: 250px;
     height: calc(100% - 70px);
-    background-color: #5CA2CD;
+    background-color: #11224E;
     box-shadow: 2px 0 5px rgba(0,0,0,0.2);
     transition: left 0.3s ease;
     z-index: 1000;
@@ -137,14 +137,15 @@ body {
 }
 #sidebar a.logout {
     margin-top: auto; /* pushes logout to bottom */
-    background-color: #e74c3c; /* red background */
+    background-color: #11224E; /* red background */
     color: white;
     text-align: center;
     font-weight: 600;
 }
 
 #sidebar a.logout:hover {
-    background-color: #c0392b;
+    background-color: white;
+    color: #11224E;
     border-left: none;
     padding-left: 20px; /* optional for uniform padding */
 }
@@ -190,7 +191,7 @@ body {
 
 /* Card styling (blue boxes) */
 .card {
-  background: #5CA2CD;
+  background: #11224E;
   border-radius: 12px;
   padding: 25px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -320,7 +321,7 @@ table tr:nth-child(even) {
 
 /* Floating Chat Bubble */
 .chat-bubble {
-  background: #5CA2CD;
+  background: #11224E;
   color: #fff;
   border-radius: 20px;
   padding: 15px 20px;
@@ -339,7 +340,7 @@ table tr:nth-child(even) {
   left: 50px;
   width: 0;
   height: 0;
-  border-top: 15px solid #5CA2CD;
+  border-top: 15px solid #11224E;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
 }
@@ -376,7 +377,7 @@ table tr:nth-child(even) {
   margin-left: 5px;
   padding: 6px 10px;
   background: #fff;
-  color: #5CA2CD;
+  color: #11224E;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -556,7 +557,7 @@ table tr:nth-child(even) {
 
 /* Modal content box */
 .modal-content {
-  background-color: #5CA2CD;
+  background-color: #11224E;
   color: white;
   margin: 8% auto;
   padding: 25px 30px;
@@ -628,7 +629,7 @@ table tr:nth-child(even) {
   border: none;
   border-radius: 8px;
   background-color: #fff;
-  color: #5CA2CD;
+  color: #11224E;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -685,7 +686,7 @@ table tr:nth-child(even) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, #5CA2CD, #80C3E5);
+  background: #11224E;
   padding: 10px 15px;
   border-bottom: 1px solid rgba(255,255,255,0.3);
 }
@@ -709,13 +710,15 @@ table tr:nth-child(even) {
 
 /* Notification content */
 .notif-content {
+  background-color: #11224E;
   padding: 10px 15px 15px;
   max-height: 350px;
   overflow-y: auto;
 }
 
 .notif-item {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: white;
+  color: #11224E;
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 10px;

@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #5CA2CD; /* top bar blue */
+    background-color: #11224E; /* top bar blue */
     color: white;
     padding: 20px 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -38,8 +38,8 @@ body {
 
 /* Logout Button */
 .logout-btn {
-    background-color: #5CA2CD;
-    color: white;
+    background-color: white;
+    color: #11224E;
     border: none;
     padding: 8px 18px;
     border-radius: 8px;
@@ -50,13 +50,13 @@ body {
 }
 
 .logout-btn:hover {
-    background-color: #4a8eb5;
+    background-color: white;
     transform: translateY(-2px);
 }
 
 /* Back Button */
 .back-btn {
-  background-color: #5CA2CD; /* blue */
+  background-color: #11224E; /* blue */
   color: white; /* white text */
   border: none;
   border-radius: 8px;
@@ -69,7 +69,7 @@ body {
 }
 
 .back-btn:hover {
-  background-color: #4a8eb5;
+  background-color: #11224E;
 }
 
 /* Layout */
@@ -90,7 +90,7 @@ body {
 }
 
 .box {
-    background-color: #5CA2CD; /* blue box */
+    background-color: #11224E; /* blue box */
     color: white;
     width: 580px;
     min-height: 320px;
@@ -116,8 +116,8 @@ body {
 }
 
 .number-box {
-    background-color: #5CA2CD;
-    color: white;
+    background-color: white;
+    color: #11224E;
     padding: 2px 8px;
     border-radius: 8px;
     margin: 0 4px;
@@ -130,16 +130,17 @@ body {
 }
 
 .toggle-btn {
-    background-color: #b7d7e9;
+    background-color: white;
     border: none;
     padding: 6px 14px;
     border-radius: 8px;
     font-weight: 600;
-    color: white;
+    color: #11224E;
     cursor: pointer;
 }
 .toggle-btn.active {
-    background-color: #5CA2CD;
+    background-color: #473472;
+    color: white;
 }
 
 /* Chart styling */
@@ -215,7 +216,7 @@ body {
 /* Title at the top (separate from inner content) */
 .box2 h2 {
     font-size: 22px;
-    color: #5CA2CD;
+    color: #11224E;
     font-weight: 700;
     margin-bottom: -20px;
 }
@@ -236,7 +237,7 @@ body {
 .projected-title {
     font-size: 15px;
     font-weight: 700;
-    color: #5CA2CD;
+    color: #11224E;
     margin-bottom: 8px;
     letter-spacing: 0.5px;
 }
@@ -244,7 +245,7 @@ body {
 .growth-percentage {
     font-size: 48px;
     font-weight: 700;
-    color: #5CA2CD;
+    color: #11224E;
     margin-bottom: 15px;
 }
 
@@ -264,8 +265,8 @@ body {
 }
 
 .forecast-btn {
-    background-color: #5CA2CD; 
-    border: 2px solid #5CA2CD; 
+    background-color: #11224E; 
+    border: 2px solid #11224E; 
     color: white; /* White text */
     font-weight: 600;
     font-size: 15px;
@@ -278,7 +279,7 @@ body {
 
 .forecast-btn:hover {
     background-color: white; 
-    color: #5CA2CD; 
+    color: #11224E; 
 }
 
 /* BRANCH COMPARISON */
@@ -324,8 +325,8 @@ body {
 }
 
 .forecast-method-btn {
-    background-color: #5CA2CD;
-    color: white;
+    background-color: white;
+    color: #11224E;
     border: none;
     font-weight: 600;
     font-size: 14px;
@@ -337,8 +338,8 @@ body {
 
 .forecast-method-btn:hover {
     background-color: white;
-    color: #5CA2CD;
-    border: 2px solid #5CA2CD;
+    color: #11224E;
+    border: 2px solid #11224E;
 }
 
 #trend-forecasting canvas {
