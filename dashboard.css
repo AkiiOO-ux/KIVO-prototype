@@ -51,12 +51,16 @@ body {
 }
 
 .center .title {
-    margin-left: 10px;
     color: white;
     font-size: 22px;
     font-weight: 600;
 }
-
+@media (max-width: 900px) {
+  .center .title {
+    margin-left: 15px; 
+    text-align: center;
+  }
+}
 .navbar .right {
     display: flex;
     align-items: center;
