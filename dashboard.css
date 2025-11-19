@@ -768,6 +768,7 @@ table tr:nth-child(even) {
     font-size: 0.85rem;
   }
 }
+
 /* EXPENSE SUMMARY — left chart, right text */
 .expense-flex {
     display: flex;
@@ -775,24 +776,31 @@ table tr:nth-child(even) {
     align-items: center;
     gap: 25px;
     margin-top: 10px;
+
+    /* FIX FOR EDGE & SAFARI */
+    min-width: 0;
 }
 
 /* Left chart */
 .expense-chart-left {
-    flex: 1;
+    flex: 1 1 auto;
+    min-width: 0; /* allows canvas to shrink */
 }
 
 .expense-chart-left canvas {
-    width: 300px !important;
-    height: 300px !important;
+    width: 100% !important;
+    max-width: 300px; /* works across browsers */
+    height: auto !important;
+    aspect-ratio: 1 / 1; /* keeps circle shape consistently */
     background: rgba(255,255,255,0.1);
     border-radius: 10px;
     padding: 10px;
+    display: block;
 }
 
 /* Right text */
 .expense-text-right {
-    width: 200px;
+    flex: 0 0 200px;
     text-align: right;
     font-size: 0.95rem;
     line-height: 1.6rem;
@@ -801,19 +809,18 @@ table tr:nth-child(even) {
 .expense-text-right p {
     margin: 4px 0;
 }
-@media (max-width: 900px) {
 
-  .expense-chart-left canvas {
-    width: 200px !important;
-    height: 200px !important;
-    background: rgba(255,255,255,0.1);
-    border-radius: 10px;
-    padding: 10px;
-}
+/* MOBILE */
+@media (max-width: 900px) {
 
   .expense-flex {
       flex-direction: column;
       text-align: center;
+  }
+
+  .expense-chart-left canvas {
+      max-width: 200px;
+      aspect-ratio: 1 / 1;
   }
 
   .expense-text-right {
