@@ -136,10 +136,21 @@
         <!-- EXPENSE SUMMARY -->
         <div id="expense" class="card hidden">
             <h2>Expense Summary</h2>
-            <div class="pie-container">
-                <canvas id="expenseChart" width="120" height="120"></canvas>
+              <div class="expense-flex">
+    
+              <!-- LEFT: Pie Chart -->
+              <div class="expense-chart-left">
+                  <canvas id="expenseChart"></canvas>
+              </div>
+
+              <!-- RIGHT: Text -->
+              <div class="expense-text-right">
+                  <p><b>Profit:</b> ₱6,000</p>
+                  <p><b>Expense:</b> ₱3,356</p>
+                  <p><b>Starting Cash:</b> ₱10,000</p>
+              </div>
+
             </div>
-            <p>Profit: ₱6,000 | Expense: ₱3,356 | Starting Cash: ₱10,000</p>
         </div>
       </div>
 
