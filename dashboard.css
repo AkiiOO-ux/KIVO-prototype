@@ -25,7 +25,6 @@ body {
     left: 0;
     width: 100%;
     z-index: 1100;
-
 }
 
 .navbar .left {
@@ -183,7 +182,7 @@ body {
 /* --- Dashboard Layout (Updated Design) --- */
 .content {
   padding: 60px 50px; /* adds more top and side space */
-  margin-top: 10px;
+  margin-top: 40px;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   grid-gap: 40px;
